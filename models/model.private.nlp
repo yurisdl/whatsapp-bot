@@ -1,0 +1,5263 @@
+{
+  "settings": {
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "trainByDomain": false,
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "1": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "2": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "3": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "4": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "5": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "6": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "7": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "8": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "9": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "10": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "oi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "ola": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "bom,dia": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "boa,tarde": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "boa,noite": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "ai,e": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "opa": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "eai": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "salve": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "como,vai": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "bem,tudo": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "fala": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "coe": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "tchau": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "ate,logo": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "ate,mais": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "adeus": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "falou": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "ate,depois": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "ate,breve": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "flw": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "a,fala,gente,se": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "a,ate,proxima": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "fui": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "boa,noite,tenha,uma": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "sim": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "claro": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "ok": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "quero": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "pode,ser": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "beleza": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "certeza,com": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "isso": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "perfeito": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "correto": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "positivo": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "fechado": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "demorou": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "blz": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "s": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "aham": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "da,gostei,ideia": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "bala,manda": {
+            "intent": "agreeing",
+            "domain": "default"
+          },
+          "nao": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "nao,quero": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "agora,nao": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "depois,talvez": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "depois": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "nao,obrigado": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "deixa,pra,proxima": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "dispenso": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "melhor,nao": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "nao,valeu": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "passo": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "de,jeito,nenhum": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "nem,pensar": {
+            "intent": "refusing",
+            "domain": "default"
+          },
+          "produtos,ver": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "mostrar,produtos": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "produtos,quais,tem,voces": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "o,que,vendem,voces": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "disponivel,o,que,tem": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "produtos": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "catalogo": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "o,que,tem": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "catalogo,mostrar": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "produtos,quero,ver": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "as,me,mostra,opcoes": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "as,novidades,quais": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "cardapio,o,ver": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "o,pra,que,tem,vender,voce": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "de,lista,produtos": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "apresenta,catalogo,me,seu": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "ai,o,que,tem": {
+            "intent": "showProducts",
+            "domain": "default"
+          },
+          "este,quero": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "quero,um": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "quero,uma": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "adicionar,ao,carrinho": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "comprar,quero": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "adicionar": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "adiciona,me": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "adiciona,carrinho,no": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "carrinho,coloca,no": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "comprar": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "esse,levar,vou": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "na,poe,sacola": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "incluir,meu,no,pedido": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "esse,mim,pra,separa": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "adiciona,desse,gostei": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "comprar,este,item,quero": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "carrinho,no,pode,por": {
+            "intent": "addToCart",
+            "domain": "default"
+          },
+          "carrinho,ver": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,meu": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,no,o,que,tem": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,mostrar": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "meu,pedido,ver": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "pedido,ver": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,o,ver": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,meu,mostrar": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "minha,sacola": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "minha,sacola,ver": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "escolhi,eu,ja,o,que": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,estao,itens,no,quais": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "meu,pedido,revisar": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "compra,da,itens,mostrar": {
+            "intent": "viewCart",
+            "domain": "default"
+          },
+          "carrinho,do,remover": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "carrinho,do,tirar": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "remover": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "tirar": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "carrinho,do,excluir": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "mais,nao,quero": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "item,remover": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "excluir,item": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "isso,pode,tirar": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "desisti,desse,item": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "esse,levar,mais,nao,vou": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "da,sacola,tira": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "cancela,esse,item": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "excluir,produto,quero,um": {
+            "intent": "removeFromCart",
+            "domain": "default"
+          },
+          "compra,finalizar": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "pagar,quero": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "checkout": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "pagar": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "concluir,pedido": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "finalizar": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "fechar,pedido": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "finalizar,pedido": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "finalizar,quero": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "ir,o,pagamento,para": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "a,conta,fechar": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "como,faco,pagar,pra": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "a,compra,fechar,pronto,quero": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "a,compra,concluir": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "escolhi,ja,pagar,quero,tudo": {
+            "intent": "checkout",
+            "domain": "default"
+          },
+          "primeiro": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "segundo": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "terceiro": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "quarto": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "quinto": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "sexto": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "setimo": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "oitavo": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "nono": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "decimo": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "o,primeiro,quero": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "o,quero,segundo": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "o,quero,terceiro": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "o,quarto,quero": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "1,o,quero": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "2,o,quero": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "3,o,quero": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "4,o,quero": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "da,me,o,primeiro": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "1,da,me,o": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "o,primeiro,querer,vou": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          },
+          "1,o,querer,vou": {
+            "intent": "selectByNumber",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting": "default",
+          "farewell": "default",
+          "agreeing": "default",
+          "refusing": "default",
+          "showProducts": "default",
+          "addToCart": "default",
+          "viewCart": "default",
+          "removeFromCart": "default",
+          "checkout": "default",
+          "selectByNumber": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "oi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "olá",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "ola",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "bom dia",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa tarde",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa noite",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "e aí",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "opa",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "eai",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "salve",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "como vai?",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "tudo bem?",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "fala",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "coé",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "tchau",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "até logo",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "até mais",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "adeus",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "falou",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "até depois",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "até breve",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "flw",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "a gente se fala",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "até a próxima",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "fui",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "tenha uma boa noite",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "sim",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "claro",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "pode ser",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "beleza",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "com certeza",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "isso",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "perfeito",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "correto",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "positivo",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "fechado",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "demorou",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "blz",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "s",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "aham",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "gostei da ideia",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "manda bala",
+            "intent": "agreeing"
+          },
+          {
+            "domain": "default",
+            "utterance": "não",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "nao",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "não quero",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "nao quero",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "agora não",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "talvez depois",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "depois",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "não obrigado",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "deixa pra próxima",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "dispenso",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "melhor não",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "não, valeu",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "passo",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "de jeito nenhum",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "nem pensar",
+            "intent": "refusing"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver produtos",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "mostrar produtos",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "quais produtos vocês têm",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "quais produtos voces tem",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "o que vocês vendem",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "o que tem disponível",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "produtos",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "catálogo",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "catalogo",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "o que tem",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "mostrar catálogo",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero ver produtos",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "me mostra as opções",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "quais as novidades?",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver o cardápio",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "o que você tem pra vender?",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "lista de produtos",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "me apresenta seu catálogo",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "tem o que aí?",
+            "intent": "showProducts"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero este",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero um",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero uma",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "adicionar ao carrinho",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero comprar",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "adicionar",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "me adiciona",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "adiciona no carrinho",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "coloca no carrinho",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "comprar",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "vou levar esse",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "põe na sacola",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "incluir no meu pedido",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "separa esse pra mim",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "gostei desse, adiciona",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero comprar este item",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "pode por no carrinho",
+            "intent": "addToCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "meu carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "o que tem no carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "mostrar carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver meu pedido",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver pedido",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver o carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "mostrar meu carrinho",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "minha sacola",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "ver minha sacola",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "o que eu já escolhi?",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quais itens estão no carrinho?",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "revisar meu pedido",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "mostrar itens da compra",
+            "intent": "viewCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "remover do carrinho",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "tirar do carrinho",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "remover",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "tirar",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "excluir do carrinho",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "não quero mais",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "nao quero mais",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "remover item",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "excluir item",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "pode tirar isso",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "desisti desse item",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "não vou levar mais esse",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "tira da sacola",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "cancela esse item",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero excluir um produto",
+            "intent": "removeFromCart"
+          },
+          {
+            "domain": "default",
+            "utterance": "finalizar compra",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero pagar",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "checkout",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "pagar",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "concluir pedido",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "finalizar",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "fechar pedido",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "finalizar pedido",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero finalizar",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "ir para o pagamento",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "fechar a conta",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "como faço pra pagar?",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "pronto, quero fechar a compra",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "concluir a compra",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "já escolhi tudo, quero pagar",
+            "intent": "checkout"
+          },
+          {
+            "domain": "default",
+            "utterance": "1",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "2",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "3",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "4",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "5",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "6",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "7",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "8",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "9",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "10",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "primeiro",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "segundo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "terceiro",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quarto",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quinto",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "sexto",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "sétimo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "setimo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "oitavo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "nono",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "décimo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "decimo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o primeiro",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o segundo",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o terceiro",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o quarto",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o 1",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o 2",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o 3",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero o 4",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "me dá o primeiro",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "me dá o 1",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "vou querer o primeiro",
+            "intent": "selectByNumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "vou querer o 1",
+            "intent": "selectByNumber"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 1,
+              "9": 1,
+              "10": 1,
+              "oi": 1,
+              "ola": 1,
+              "bom": 1,
+              "dia": 1,
+              "boa": 1,
+              "tarde": 1,
+              "noite": 1,
+              "hey": 1,
+              "e": 1,
+              "ai": 1,
+              "opa": 1,
+              "eai": 1,
+              "salve": 1,
+              "como": 1,
+              "vai": 1,
+              "tudo": 1,
+              "bem": 1,
+              "fala": 1,
+              "coe": 1,
+              "tchau": 1,
+              "ate": 1,
+              "logo": 1,
+              "mais": 1,
+              "adeus": 1,
+              "falou": 1,
+              "depois": 1,
+              "breve": 1,
+              "flw": 1,
+              "a": 1,
+              "gente": 1,
+              "se": 1,
+              "proxima": 1,
+              "fui": 1,
+              "tenha": 1,
+              "uma": 1,
+              "sim": 1,
+              "claro": 1,
+              "ok": 1,
+              "quero": 1,
+              "pode": 1,
+              "ser": 1,
+              "beleza": 1,
+              "com": 1,
+              "certeza": 1,
+              "isso": 1,
+              "perfeito": 1,
+              "correto": 1,
+              "positivo": 1,
+              "fechado": 1,
+              "demorou": 1,
+              "blz": 1,
+              "s": 1,
+              "aham": 1,
+              "gostei": 1,
+              "da": 1,
+              "ideia": 1,
+              "manda": 1,
+              "bala": 1,
+              "nao": 1,
+              "agora": 1,
+              "talvez": 1,
+              "obrigado": 1,
+              "deixa": 1,
+              "pra": 1,
+              "dispenso": 1,
+              "melhor": 1,
+              "valeu": 1,
+              "passo": 1,
+              "de": 1,
+              "jeito": 1,
+              "nenhum": 1,
+              "nem": 1,
+              "pensar": 1,
+              "ver": 1,
+              "produtos": 1,
+              "mostrar": 1,
+              "quais": 1,
+              "voces": 1,
+              "tem": 1,
+              "o": 1,
+              "que": 1,
+              "vendem": 1,
+              "disponivel": 1,
+              "catalogo": 1,
+              "me": 1,
+              "mostra": 1,
+              "as": 1,
+              "opcoes": 1,
+              "novidades": 1,
+              "cardapio": 1,
+              "voce": 1,
+              "vender": 1,
+              "lista": 1,
+              "apresenta": 1,
+              "seu": 1,
+              "este": 1,
+              "um": 1,
+              "adicionar": 1,
+              "ao": 1,
+              "carrinho": 1,
+              "comprar": 1,
+              "adiciona": 1,
+              "no": 1,
+              "coloca": 1,
+              "vou": 1,
+              "levar": 1,
+              "esse": 1,
+              "poe": 1,
+              "na": 1,
+              "sacola": 1,
+              "incluir": 1,
+              "meu": 1,
+              "pedido": 1,
+              "separa": 1,
+              "mim": 1,
+              "desse": 1,
+              "item": 1,
+              "por": 1,
+              "minha": 1,
+              "eu": 1,
+              "ja": 1,
+              "escolhi": 1,
+              "itens": 1,
+              "estao": 1,
+              "revisar": 1,
+              "compra": 1,
+              "remover": 1,
+              "do": 1,
+              "tirar": 1,
+              "excluir": 1,
+              "desisti": 1,
+              "tira": 1,
+              "cancela": 1,
+              "produto": 1,
+              "finalizar": 1,
+              "pagar": 1,
+              "checkout": 1,
+              "concluir": 1,
+              "fechar": 1,
+              "ir": 1,
+              "para": 1,
+              "pagamento": 1,
+              "conta": 1,
+              "faco": 1,
+              "pronto": 1,
+              "primeiro": 1,
+              "segundo": 1,
+              "terceiro": 1,
+              "quarto": 1,
+              "quinto": 1,
+              "sexto": 1,
+              "setimo": 1,
+              "oitavo": 1,
+              "nono": 1,
+              "decimo": 1,
+              "querer": 1
+            },
+            "intents": {
+              "greeting": 1,
+              "farewell": 1,
+              "agreeing": 1,
+              "refusing": 1,
+              "showProducts": 1,
+              "addToCart": 1,
+              "viewCart": 1,
+              "removeFromCart": 1,
+              "checkout": 1,
+              "selectByNumber": 1
+            },
+            "intentFeatures": {
+              "greeting": {
+                "oi": 1,
+                "ola": 1,
+                "bom": 1,
+                "dia": 1,
+                "boa": 1,
+                "tarde": 1,
+                "noite": 1,
+                "hey": 1,
+                "e": 1,
+                "ai": 1,
+                "opa": 1,
+                "eai": 1,
+                "salve": 1,
+                "como": 1,
+                "vai": 1,
+                "tudo": 1,
+                "bem": 1,
+                "fala": 1,
+                "coe": 1
+              },
+              "farewell": {
+                "tchau": 1,
+                "ate": 1,
+                "logo": 1,
+                "mais": 1,
+                "adeus": 1,
+                "falou": 1,
+                "depois": 1,
+                "breve": 1,
+                "flw": 1,
+                "a": 1,
+                "gente": 1,
+                "se": 1,
+                "fala": 1,
+                "proxima": 1,
+                "fui": 1,
+                "tenha": 1,
+                "uma": 1,
+                "boa": 1,
+                "noite": 1
+              },
+              "agreeing": {
+                "sim": 1,
+                "claro": 1,
+                "ok": 1,
+                "quero": 1,
+                "pode": 1,
+                "ser": 1,
+                "beleza": 1,
+                "com": 1,
+                "certeza": 1,
+                "isso": 1,
+                "perfeito": 1,
+                "correto": 1,
+                "positivo": 1,
+                "fechado": 1,
+                "demorou": 1,
+                "blz": 1,
+                "s": 1,
+                "aham": 1,
+                "gostei": 1,
+                "da": 1,
+                "ideia": 1,
+                "manda": 1,
+                "bala": 1
+              },
+              "refusing": {
+                "nao": 1,
+                "quero": 1,
+                "agora": 1,
+                "talvez": 1,
+                "depois": 1,
+                "obrigado": 1,
+                "deixa": 1,
+                "pra": 1,
+                "proxima": 1,
+                "dispenso": 1,
+                "melhor": 1,
+                "valeu": 1,
+                "passo": 1,
+                "de": 1,
+                "jeito": 1,
+                "nenhum": 1,
+                "nem": 1,
+                "pensar": 1
+              },
+              "showProducts": {
+                "ver": 1,
+                "produtos": 1,
+                "mostrar": 1,
+                "quais": 1,
+                "voces": 1,
+                "tem": 1,
+                "o": 1,
+                "que": 1,
+                "vendem": 1,
+                "disponivel": 1,
+                "catalogo": 1,
+                "quero": 1,
+                "me": 1,
+                "mostra": 1,
+                "as": 1,
+                "opcoes": 1,
+                "novidades": 1,
+                "cardapio": 1,
+                "voce": 1,
+                "pra": 1,
+                "vender": 1,
+                "lista": 1,
+                "de": 1,
+                "apresenta": 1,
+                "seu": 1,
+                "ai": 1
+              },
+              "addToCart": {
+                "quero": 1,
+                "este": 1,
+                "um": 1,
+                "uma": 1,
+                "adicionar": 1,
+                "ao": 1,
+                "carrinho": 1,
+                "comprar": 1,
+                "me": 1,
+                "adiciona": 1,
+                "no": 1,
+                "coloca": 1,
+                "vou": 1,
+                "levar": 1,
+                "esse": 1,
+                "poe": 1,
+                "na": 1,
+                "sacola": 1,
+                "incluir": 1,
+                "meu": 1,
+                "pedido": 1,
+                "separa": 1,
+                "pra": 1,
+                "mim": 1,
+                "gostei": 1,
+                "desse": 1,
+                "item": 1,
+                "pode": 1,
+                "por": 1
+              },
+              "viewCart": {
+                "ver": 1,
+                "carrinho": 1,
+                "meu": 1,
+                "o": 1,
+                "que": 1,
+                "tem": 1,
+                "no": 1,
+                "mostrar": 1,
+                "pedido": 1,
+                "minha": 1,
+                "sacola": 1,
+                "eu": 1,
+                "ja": 1,
+                "escolhi": 1,
+                "quais": 1,
+                "itens": 1,
+                "estao": 1,
+                "revisar": 1,
+                "da": 1,
+                "compra": 1
+              },
+              "removeFromCart": {
+                "remover": 1,
+                "do": 1,
+                "carrinho": 1,
+                "tirar": 1,
+                "excluir": 1,
+                "nao": 1,
+                "quero": 1,
+                "mais": 1,
+                "item": 1,
+                "pode": 1,
+                "isso": 1,
+                "desisti": 1,
+                "desse": 1,
+                "vou": 1,
+                "levar": 1,
+                "esse": 1,
+                "tira": 1,
+                "da": 1,
+                "sacola": 1,
+                "cancela": 1,
+                "um": 1,
+                "produto": 1
+              },
+              "checkout": {
+                "finalizar": 1,
+                "compra": 1,
+                "quero": 1,
+                "pagar": 1,
+                "checkout": 1,
+                "concluir": 1,
+                "pedido": 1,
+                "fechar": 1,
+                "ir": 1,
+                "para": 1,
+                "o": 1,
+                "pagamento": 1,
+                "a": 1,
+                "conta": 1,
+                "como": 1,
+                "faco": 1,
+                "pra": 1,
+                "pronto": 1,
+                "ja": 1,
+                "escolhi": 1,
+                "tudo": 1
+              },
+              "selectByNumber": {
+                "1": 1,
+                "2": 1,
+                "3": 1,
+                "4": 1,
+                "5": 1,
+                "6": 1,
+                "7": 1,
+                "8": 1,
+                "9": 1,
+                "10": 1,
+                "primeiro": 1,
+                "segundo": 1,
+                "terceiro": 1,
+                "quarto": 1,
+                "quinto": 1,
+                "sexto": 1,
+                "setimo": 1,
+                "oitavo": 1,
+                "nono": 1,
+                "decimo": 1,
+                "quero": 1,
+                "o": 1,
+                "me": 1,
+                "da": 1,
+                "vou": 1,
+                "querer": 1
+              }
+            },
+            "featuresToIntent": {
+              "1": [
+                "selectByNumber"
+              ],
+              "2": [
+                "selectByNumber"
+              ],
+              "3": [
+                "selectByNumber"
+              ],
+              "4": [
+                "selectByNumber"
+              ],
+              "5": [
+                "selectByNumber"
+              ],
+              "6": [
+                "selectByNumber"
+              ],
+              "7": [
+                "selectByNumber"
+              ],
+              "8": [
+                "selectByNumber"
+              ],
+              "9": [
+                "selectByNumber"
+              ],
+              "10": [
+                "selectByNumber"
+              ],
+              "oi": [
+                "greeting"
+              ],
+              "ola": [
+                "greeting"
+              ],
+              "bom": [
+                "greeting"
+              ],
+              "dia": [
+                "greeting"
+              ],
+              "boa": [
+                "greeting",
+                "farewell"
+              ],
+              "tarde": [
+                "greeting"
+              ],
+              "noite": [
+                "greeting",
+                "farewell"
+              ],
+              "hey": [
+                "greeting"
+              ],
+              "e": [
+                "greeting"
+              ],
+              "ai": [
+                "greeting",
+                "showProducts"
+              ],
+              "opa": [
+                "greeting"
+              ],
+              "eai": [
+                "greeting"
+              ],
+              "salve": [
+                "greeting"
+              ],
+              "como": [
+                "greeting",
+                "checkout"
+              ],
+              "vai": [
+                "greeting"
+              ],
+              "tudo": [
+                "greeting",
+                "checkout"
+              ],
+              "bem": [
+                "greeting"
+              ],
+              "fala": [
+                "greeting",
+                "farewell"
+              ],
+              "coe": [
+                "greeting"
+              ],
+              "tchau": [
+                "farewell"
+              ],
+              "ate": [
+                "farewell"
+              ],
+              "logo": [
+                "farewell"
+              ],
+              "mais": [
+                "farewell",
+                "removeFromCart"
+              ],
+              "adeus": [
+                "farewell"
+              ],
+              "falou": [
+                "farewell"
+              ],
+              "depois": [
+                "farewell",
+                "refusing"
+              ],
+              "breve": [
+                "farewell"
+              ],
+              "flw": [
+                "farewell"
+              ],
+              "a": [
+                "farewell",
+                "checkout"
+              ],
+              "gente": [
+                "farewell"
+              ],
+              "se": [
+                "farewell"
+              ],
+              "proxima": [
+                "farewell",
+                "refusing"
+              ],
+              "fui": [
+                "farewell"
+              ],
+              "tenha": [
+                "farewell"
+              ],
+              "uma": [
+                "farewell",
+                "addToCart"
+              ],
+              "sim": [
+                "agreeing"
+              ],
+              "claro": [
+                "agreeing"
+              ],
+              "ok": [
+                "agreeing"
+              ],
+              "quero": [
+                "agreeing",
+                "refusing",
+                "showProducts",
+                "addToCart",
+                "removeFromCart",
+                "checkout",
+                "selectByNumber"
+              ],
+              "pode": [
+                "agreeing",
+                "addToCart",
+                "removeFromCart"
+              ],
+              "ser": [
+                "agreeing"
+              ],
+              "beleza": [
+                "agreeing"
+              ],
+              "com": [
+                "agreeing"
+              ],
+              "certeza": [
+                "agreeing"
+              ],
+              "isso": [
+                "agreeing",
+                "removeFromCart"
+              ],
+              "perfeito": [
+                "agreeing"
+              ],
+              "correto": [
+                "agreeing"
+              ],
+              "positivo": [
+                "agreeing"
+              ],
+              "fechado": [
+                "agreeing"
+              ],
+              "demorou": [
+                "agreeing"
+              ],
+              "blz": [
+                "agreeing"
+              ],
+              "s": [
+                "agreeing"
+              ],
+              "aham": [
+                "agreeing"
+              ],
+              "gostei": [
+                "agreeing",
+                "addToCart"
+              ],
+              "da": [
+                "agreeing",
+                "viewCart",
+                "removeFromCart",
+                "selectByNumber"
+              ],
+              "ideia": [
+                "agreeing"
+              ],
+              "manda": [
+                "agreeing"
+              ],
+              "bala": [
+                "agreeing"
+              ],
+              "nao": [
+                "refusing",
+                "removeFromCart"
+              ],
+              "agora": [
+                "refusing"
+              ],
+              "talvez": [
+                "refusing"
+              ],
+              "obrigado": [
+                "refusing"
+              ],
+              "deixa": [
+                "refusing"
+              ],
+              "pra": [
+                "refusing",
+                "showProducts",
+                "addToCart",
+                "checkout"
+              ],
+              "dispenso": [
+                "refusing"
+              ],
+              "melhor": [
+                "refusing"
+              ],
+              "valeu": [
+                "refusing"
+              ],
+              "passo": [
+                "refusing"
+              ],
+              "de": [
+                "refusing",
+                "showProducts"
+              ],
+              "jeito": [
+                "refusing"
+              ],
+              "nenhum": [
+                "refusing"
+              ],
+              "nem": [
+                "refusing"
+              ],
+              "pensar": [
+                "refusing"
+              ],
+              "ver": [
+                "showProducts",
+                "viewCart"
+              ],
+              "produtos": [
+                "showProducts"
+              ],
+              "mostrar": [
+                "showProducts",
+                "viewCart"
+              ],
+              "quais": [
+                "showProducts",
+                "viewCart"
+              ],
+              "voces": [
+                "showProducts"
+              ],
+              "tem": [
+                "showProducts",
+                "viewCart"
+              ],
+              "o": [
+                "showProducts",
+                "viewCart",
+                "checkout",
+                "selectByNumber"
+              ],
+              "que": [
+                "showProducts",
+                "viewCart"
+              ],
+              "vendem": [
+                "showProducts"
+              ],
+              "disponivel": [
+                "showProducts"
+              ],
+              "catalogo": [
+                "showProducts"
+              ],
+              "me": [
+                "showProducts",
+                "addToCart",
+                "selectByNumber"
+              ],
+              "mostra": [
+                "showProducts"
+              ],
+              "as": [
+                "showProducts"
+              ],
+              "opcoes": [
+                "showProducts"
+              ],
+              "novidades": [
+                "showProducts"
+              ],
+              "cardapio": [
+                "showProducts"
+              ],
+              "voce": [
+                "showProducts"
+              ],
+              "vender": [
+                "showProducts"
+              ],
+              "lista": [
+                "showProducts"
+              ],
+              "apresenta": [
+                "showProducts"
+              ],
+              "seu": [
+                "showProducts"
+              ],
+              "este": [
+                "addToCart"
+              ],
+              "um": [
+                "addToCart",
+                "removeFromCart"
+              ],
+              "adicionar": [
+                "addToCart"
+              ],
+              "ao": [
+                "addToCart"
+              ],
+              "carrinho": [
+                "addToCart",
+                "viewCart",
+                "removeFromCart"
+              ],
+              "comprar": [
+                "addToCart"
+              ],
+              "adiciona": [
+                "addToCart"
+              ],
+              "no": [
+                "addToCart",
+                "viewCart"
+              ],
+              "coloca": [
+                "addToCart"
+              ],
+              "vou": [
+                "addToCart",
+                "removeFromCart",
+                "selectByNumber"
+              ],
+              "levar": [
+                "addToCart",
+                "removeFromCart"
+              ],
+              "esse": [
+                "addToCart",
+                "removeFromCart"
+              ],
+              "poe": [
+                "addToCart"
+              ],
+              "na": [
+                "addToCart"
+              ],
+              "sacola": [
+                "addToCart",
+                "viewCart",
+                "removeFromCart"
+              ],
+              "incluir": [
+                "addToCart"
+              ],
+              "meu": [
+                "addToCart",
+                "viewCart"
+              ],
+              "pedido": [
+                "addToCart",
+                "viewCart",
+                "checkout"
+              ],
+              "separa": [
+                "addToCart"
+              ],
+              "mim": [
+                "addToCart"
+              ],
+              "desse": [
+                "addToCart",
+                "removeFromCart"
+              ],
+              "item": [
+                "addToCart",
+                "removeFromCart"
+              ],
+              "por": [
+                "addToCart"
+              ],
+              "minha": [
+                "viewCart"
+              ],
+              "eu": [
+                "viewCart"
+              ],
+              "ja": [
+                "viewCart",
+                "checkout"
+              ],
+              "escolhi": [
+                "viewCart",
+                "checkout"
+              ],
+              "itens": [
+                "viewCart"
+              ],
+              "estao": [
+                "viewCart"
+              ],
+              "revisar": [
+                "viewCart"
+              ],
+              "compra": [
+                "viewCart",
+                "checkout"
+              ],
+              "remover": [
+                "removeFromCart"
+              ],
+              "do": [
+                "removeFromCart"
+              ],
+              "tirar": [
+                "removeFromCart"
+              ],
+              "excluir": [
+                "removeFromCart"
+              ],
+              "desisti": [
+                "removeFromCart"
+              ],
+              "tira": [
+                "removeFromCart"
+              ],
+              "cancela": [
+                "removeFromCart"
+              ],
+              "produto": [
+                "removeFromCart"
+              ],
+              "finalizar": [
+                "checkout"
+              ],
+              "pagar": [
+                "checkout"
+              ],
+              "checkout": [
+                "checkout"
+              ],
+              "concluir": [
+                "checkout"
+              ],
+              "fechar": [
+                "checkout"
+              ],
+              "ir": [
+                "checkout"
+              ],
+              "para": [
+                "checkout"
+              ],
+              "pagamento": [
+                "checkout"
+              ],
+              "conta": [
+                "checkout"
+              ],
+              "faco": [
+                "checkout"
+              ],
+              "pronto": [
+                "checkout"
+              ],
+              "primeiro": [
+                "selectByNumber"
+              ],
+              "segundo": [
+                "selectByNumber"
+              ],
+              "terceiro": [
+                "selectByNumber"
+              ],
+              "quarto": [
+                "selectByNumber"
+              ],
+              "quinto": [
+                "selectByNumber"
+              ],
+              "sexto": [
+                "selectByNumber"
+              ],
+              "setimo": [
+                "selectByNumber"
+              ],
+              "oitavo": [
+                "selectByNumber"
+              ],
+              "nono": [
+                "selectByNumber"
+              ],
+              "decimo": [
+                "selectByNumber"
+              ],
+              "querer": [
+                "selectByNumber"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "oi",
+                "ola",
+                "bom",
+                "dia",
+                "boa",
+                "tarde",
+                "noite",
+                "hey",
+                "e",
+                "ai",
+                "opa",
+                "eai",
+                "salve",
+                "como",
+                "vai",
+                "tudo",
+                "bem",
+                "fala",
+                "coe",
+                "tchau",
+                "ate",
+                "logo",
+                "mais",
+                "adeus",
+                "falou",
+                "depois",
+                "breve",
+                "flw",
+                "a",
+                "gente",
+                "se",
+                "proxima",
+                "fui",
+                "tenha",
+                "uma",
+                "sim",
+                "claro",
+                "ok",
+                "quero",
+                "pode",
+                "ser",
+                "beleza",
+                "com",
+                "certeza",
+                "isso",
+                "perfeito",
+                "correto",
+                "positivo",
+                "fechado",
+                "demorou",
+                "blz",
+                "s",
+                "aham",
+                "gostei",
+                "da",
+                "ideia",
+                "manda",
+                "bala",
+                "nao",
+                "agora",
+                "talvez",
+                "obrigado",
+                "deixa",
+                "pra",
+                "dispenso",
+                "melhor",
+                "valeu",
+                "passo",
+                "de",
+                "jeito",
+                "nenhum",
+                "nem",
+                "pensar",
+                "ver",
+                "produtos",
+                "mostrar",
+                "quais",
+                "voces",
+                "tem",
+                "o",
+                "que",
+                "vendem",
+                "disponivel",
+                "catalogo",
+                "me",
+                "mostra",
+                "as",
+                "opcoes",
+                "novidades",
+                "cardapio",
+                "voce",
+                "vender",
+                "lista",
+                "apresenta",
+                "seu",
+                "este",
+                "um",
+                "adicionar",
+                "ao",
+                "carrinho",
+                "comprar",
+                "adiciona",
+                "no",
+                "coloca",
+                "vou",
+                "levar",
+                "esse",
+                "poe",
+                "na",
+                "sacola",
+                "incluir",
+                "meu",
+                "pedido",
+                "separa",
+                "mim",
+                "desse",
+                "item",
+                "por",
+                "minha",
+                "eu",
+                "ja",
+                "escolhi",
+                "itens",
+                "estao",
+                "revisar",
+                "compra",
+                "remover",
+                "do",
+                "tirar",
+                "excluir",
+                "desisti",
+                "tira",
+                "cancela",
+                "produto",
+                "finalizar",
+                "pagar",
+                "checkout",
+                "concluir",
+                "fechar",
+                "ir",
+                "para",
+                "pagamento",
+                "conta",
+                "faco",
+                "pronto",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "primeiro",
+                "segundo",
+                "terceiro",
+                "quarto",
+                "quinto",
+                "sexto",
+                "setimo",
+                "oitavo",
+                "nono",
+                "decimo",
+                "querer"
+              ],
+              "intents": [
+                "greeting",
+                "farewell",
+                "agreeing",
+                "refusing",
+                "showProducts",
+                "addToCart",
+                "viewCart",
+                "removeFromCart",
+                "checkout",
+                "selectByNumber"
+              ],
+              "perceptrons": [
+                [
+                  12.429021835327148,
+                  12.428869247436523,
+                  6.214433670043945,
+                  6.214433670043945,
+                  8.285672187805176,
+                  4.143693447113037,
+                  4.142022132873535,
+                  12.428987503051758,
+                  7.226363182067871,
+                  5.202484130859375,
+                  12.428998947143555,
+                  12.428999900817871,
+                  12.428993225097656,
+                  5.2945051193237305,
+                  7.134375095367432,
+                  5.7794718742370605,
+                  6.649411678314209,
+                  12.42513370513916,
+                  12.428520202636719,
+                  -2.9851953983306885,
+                  -3.8866002559661865,
+                  -1.0577770471572876,
+                  -0.9611647725105286,
+                  -2.9007327556610107,
+                  -2.8387844562530518,
+                  -2.1848561763763428,
+                  -0.6616092920303345,
+                  -2.7747995853424072,
+                  -4.9728684425354,
+                  -4.6542067527771,
+                  -4.6542067527771,
+                  -0.7340280413627625,
+                  -2.668241024017334,
+                  -7.142114639282227,
+                  -7.142114639282227,
+                  -2.507120132446289,
+                  -2.462649345397949,
+                  -2.4281201362609863,
+                  -2.9738309383392334,
+                  -1.468769907951355,
+                  -1.4629040956497192,
+                  -2.351003408432007,
+                  -1.4231221675872803,
+                  -1.4231221675872803,
+                  -2.303027868270874,
+                  -2.2682313919067383,
+                  -2.2410757541656494,
+                  -2.2089526653289795,
+                  -2.1845574378967285,
+                  -2.1604998111724854,
+                  -2.132951021194458,
+                  -2.111541509628296,
+                  -2.090705633163452,
+                  -0.8872143030166626,
+                  -0.8139289021492004,
+                  -0.7577297687530518,
+                  -1.1784859895706177,
+                  -1.1784859895706177,
+                  -2.352362632751465,
+                  -0.28251320123672485,
+                  -0.5319287776947021,
+                  -0.22775952517986298,
+                  -0.4160383939743042,
+                  -2.384551763534546,
+                  -2.032620668411255,
+                  -0.1574285626411438,
+                  -0.1421067863702774,
+                  -2.0133216381073,
+                  -0.8232850432395935,
+                  -0.7436128854751587,
+                  -0.7436128854751587,
+                  -1.1175081729888916,
+                  -1.1175081729888916,
+                  -0.781379222869873,
+                  -2.063838005065918,
+                  -0.6610073447227478,
+                  -0.7548738718032837,
+                  -0.3192748427391052,
+                  -2.372765302658081,
+                  -2.52834415435791,
+                  -2.3709490299224854,
+                  -0.14529727399349213,
+                  -0.08789538592100143,
+                  -2.1690516471862793,
+                  -1.1651643514633179,
+                  -0.31186434626579285,
+                  -0.9065088033676147,
+                  -0.31186434626579285,
+                  -0.5815218687057495,
+                  -0.1440129280090332,
+                  -0.004589336924254894,
+                  -0.004589336924254894,
+                  -0.07097264379262924,
+                  -0.08811168372631073,
+                  -0.08811168372631073,
+                  -0.043697308748960495,
+                  -0.03167443722486496,
+                  -1.9594675302505493,
+                  -0.2132255882024765,
+                  -1.9643372297286987,
+                  -1.931724190711975,
+                  -0.9706366062164307,
+                  -0.47465965151786804,
+                  -0.23354896903038025,
+                  -0.6526752710342407,
+                  -0.6526752710342407,
+                  -0.8437674641609192,
+                  -0.4886305332183838,
+                  -0.4886305332183838,
+                  -1.2929372787475586,
+                  -0.11698809266090393,
+                  -0.5827915668487549,
+                  -1.5449031591415405,
+                  -0.08440085500478745,
+                  -0.08440085500478745,
+                  -0.45900431275367737,
+                  -1.3204033374786377,
+                  -0.0029008241835981607,
+                  -0.7879090905189514,
+                  0,
+                  -0.8697373867034912,
+                  -0.8697373867034912,
+                  -0.03947167098522186,
+                  0,
+                  -0.21964704990386963,
+                  -0.6142235398292542,
+                  -1.9137569665908813,
+                  -0.13613110780715942,
+                  -1.8982093334197998,
+                  -0.7109183073043823,
+                  -0.3312857449054718,
+                  -0.011842282488942146,
+                  -0.0931994616985321,
+                  0,
+                  -1.8955962657928467,
+                  -2.9585494995117188,
+                  -1.8847578763961792,
+                  -0.4903703033924103,
+                  -0.45521292090415955,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1.8396506309509277,
+                  0,
+                  -1.8683220148086548,
+                  -1.8640179634094238,
+                  -1.8609137535095215,
+                  -1.8586939573287964,
+                  -1.8573569059371948,
+                  -1.8569412231445312,
+                  -1.8569355010986328,
+                  -1.8569282293319702,
+                  -1.8569194078445435,
+                  -1.8569085597991943,
+                  -1.8568956851959229,
+                  -1.85688054561615,
+                  -1.8568627834320068,
+                  -1.8568419218063354,
+                  -1.8568180799484253,
+                  -1.8567907810211182,
+                  -1.8569058179855347,
+                  -1.8567464351654053,
+                  -1.8567091226577759,
+                  -1.856873631477356,
+                  0,
+                  1.856915526547549
+                ],
+                [
+                  -0.7062196731567383,
+                  -0.7493603825569153,
+                  -0.37628087401390076,
+                  -0.37628087401390076,
+                  -0.6769191026687622,
+                  -1.1244560480117798,
+                  0.45350247621536255,
+                  -0.6339947581291199,
+                  -0.3378011882305145,
+                  -0.34299641847610474,
+                  -0.6271185874938965,
+                  -0.6230739951133728,
+                  -0.6189696788787842,
+                  -0.33106324076652527,
+                  -0.33106324076652527,
+                  -0.33021581172943115,
+                  -0.33021581172943115,
+                  -0.22100907564163208,
+                  -0.5763958692550659,
+                  14.073710441589355,
+                  13.51608657836914,
+                  0.6764383316040039,
+                  0.6834738850593567,
+                  14.078988075256348,
+                  14.077279090881348,
+                  0.2146608978509903,
+                  0.6575711369514465,
+                  14.061921119689941,
+                  2.175891876220703,
+                  6.062788009643555,
+                  6.062788009643555,
+                  -1.5510914325714111,
+                  14.06119155883789,
+                  9.149523735046387,
+                  5.165989875793457,
+                  -1.6185722351074219,
+                  -1.5917375087738037,
+                  -1.5545765161514282,
+                  -5.449550151824951,
+                  -1.0130205154418945,
+                  -1.0047259330749512,
+                  -1.4875319004058838,
+                  -0.985637903213501,
+                  -0.985637903213501,
+                  -1.4347776174545288,
+                  -1.4135448932647705,
+                  -1.3839948177337646,
+                  -1.3629339933395386,
+                  -1.3362679481506348,
+                  -1.3098313808441162,
+                  -1.291628360748291,
+                  -1.2676384449005127,
+                  -1.249942421913147,
+                  -0.6066663265228271,
+                  -0.5482223033905029,
+                  -0.526945173740387,
+                  -0.7589656114578247,
+                  -0.7589656114578247,
+                  -1.8592034578323364,
+                  -0.19693510234355927,
+                  -1.3973636627197266,
+                  -0.1151822879910469,
+                  -0.6620426774024963,
+                  -0.7445497512817383,
+                  -1.1121788024902344,
+                  -0.06313462555408478,
+                  -0.05333542451262474,
+                  -1.0963321924209595,
+                  -0.508182168006897,
+                  -0.4560987949371338,
+                  -0.4560987949371338,
+                  -0.6556156873703003,
+                  -0.6556156873703003,
+                  -0.5965575575828552,
+                  -1.185802698135376,
+                  -0.41611728072166443,
+                  -0.4858275055885315,
+                  -0.32263344526290894,
+                  -0.3826400637626648,
+                  -0.700022280216217,
+                  -0.41108110547065735,
+                  -0.1496591717004776,
+                  -0.10804448276758194,
+                  -1.2563952207565308,
+                  -0.6700083613395691,
+                  -0.21034127473831177,
+                  -0.5382242202758789,
+                  -0.21034127473831177,
+                  -0.31425485014915466,
+                  -0.15802490711212158,
+                  -0.00497567281126976,
+                  -0.00497567281126976,
+                  -0.04167366772890091,
+                  -0.0669289380311966,
+                  -0.0669289380311966,
+                  -0.020732268691062927,
+                  -0.011797930113971233,
+                  -1.0010828971862793,
+                  -0.14310653507709503,
+                  -1.0365958213806152,
+                  -0.9593241810798645,
+                  -0.5119086503982544,
+                  -0.3148800730705261,
+                  -0.1242983266711235,
+                  -0.5511796474456787,
+                  -0.5511796474456787,
+                  -0.6572948098182678,
+                  -0.290332555770874,
+                  -0.290332555770874,
+                  -0.7204790115356445,
+                  -0.09434528648853302,
+                  -0.412077933549881,
+                  -0.5799220204353333,
+                  -0.059711359441280365,
+                  -0.059711359441280365,
+                  -0.253677099943161,
+                  -0.7223116159439087,
+                  -0.003467933740466833,
+                  -0.41429752111434937,
+                  -0.03632292523980141,
+                  -0.03632292523980141,
+                  -0.03632292523980141,
+                  -0.005221751052886248,
+                  0,
+                  -0.18737058341503143,
+                  -1.6427700519561768,
+                  -0.9530655741691589,
+                  -0.09220056980848312,
+                  -0.9211288690567017,
+                  -0.3642428517341614,
+                  -0.18764342367649078,
+                  -0.005305327475070953,
+                  -0.03321153670549393,
+                  0,
+                  -0.8879840970039368,
+                  -0.885968029499054,
+                  -0.8962283730506897,
+                  -1.4521700143814087,
+                  -1.6313180923461914,
+                  -0.12403380870819092,
+                  -0.12403380870819092,
+                  -0.12403380870819092,
+                  -1.4656959772109985,
+                  0,
+                  -0.10629551857709885,
+                  -0.8404957056045532,
+                  -0.8314952254295349,
+                  -0.8213312029838562,
+                  -0.8131692409515381,
+                  -0.8036602139472961,
+                  -0.7962697744369507,
+                  -0.7889490127563477,
+                  -0.7806418538093567,
+                  -0.773999035358429,
+                  -0.767426609992981,
+                  -0.7601020932197571,
+                  -0.754100501537323,
+                  -0.7471341490745544,
+                  -0.741620659828186,
+                  -0.7360938787460327,
+                  -0.7298731207847595,
+                  -0.7782432436943054,
+                  -0.7203758358955383,
+                  -0.715358555316925,
+                  -0.7598810791969299,
+                  0,
+                  0.1720656111154799
+                ],
+                [
+                  -2.7686855792999268,
+                  -2.7720768451690674,
+                  -1.3859531879425049,
+                  -1.3859531879425049,
+                  -1.8488377332687378,
+                  -0.9244720935821533,
+                  -0.9240882396697998,
+                  -2.7676329612731934,
+                  -1.3771445751190186,
+                  -1.3940671682357788,
+                  -2.7671096324920654,
+                  -2.7667417526245117,
+                  -2.7663674354553223,
+                  -1.3850246667861938,
+                  -1.3850246667861938,
+                  -1.384945273399353,
+                  -1.384945273399353,
+                  -2.7656490802764893,
+                  -2.765255928039551,
+                  -2.764854907989502,
+                  -2.07804536819458,
+                  -0.693081796169281,
+                  -0.6928249001502991,
+                  -2.7642853260040283,
+                  -2.763864517211914,
+                  -4.371201038360596,
+                  -0.6916990280151367,
+                  -2.7633306980133057,
+                  -1.5575178861618042,
+                  -0.0009076832211576402,
+                  -0.0009076832211576402,
+                  -1.6929181814193726,
+                  -2.762887954711914,
+                  0,
+                  -6.653592109680176,
+                  11.523211479187012,
+                  11.523646354675293,
+                  11.524081230163574,
+                  3.211310863494873,
+                  -0.8958443999290466,
+                  12.087750434875488,
+                  11.206018447875977,
+                  5.603398323059082,
+                  5.603398323059082,
+                  11.162199974060059,
+                  11.202946662902832,
+                  11.202811241149902,
+                  11.202670097351074,
+                  11.20252513885498,
+                  11.202374458312988,
+                  11.202219009399414,
+                  11.202055931091309,
+                  11.201887130737305,
+                  3.101123571395874,
+                  2.554227352142334,
+                  5.548830509185791,
+                  5.601778507232666,
+                  5.601778507232666,
+                  -6.582447052001953,
+                  -0.618802011013031,
+                  -1.7549774646759033,
+                  -0.43834036588668823,
+                  -1.6929181814193726,
+                  -2.1526198387145996,
+                  -3.717749834060669,
+                  -0.25250008702278137,
+                  -0.21289537847042084,
+                  -3.6449263095855713,
+                  -1.8218047618865967,
+                  -1.6382452249526978,
+                  -1.6382452249526978,
+                  -2.231994152069092,
+                  -2.231994152069092,
+                  -2.3164398670196533,
+                  -4.410076141357422,
+                  -2.565706253051758,
+                  -1.6799287796020508,
+                  -1.251400113105774,
+                  -1.4913573265075684,
+                  -3.122108221054077,
+                  -1.6241787672042847,
+                  -0.6229717135429382,
+                  -0.44010400772094727,
+                  -4.309171676635742,
+                  -1.9783490896224976,
+                  -0.7828430533409119,
+                  -1.9561952352523804,
+                  -0.7828430533409119,
+                  -1.0542011260986328,
+                  -0.5642229914665222,
+                  -0.015486542135477066,
+                  -0.015486542135477066,
+                  -0.14946480095386505,
+                  -0.253834992647171,
+                  -0.253834992647171,
+                  -6.659737586975098,
+                  -6.663623332977295,
+                  -3.457111358642578,
+                  -0.5600123405456543,
+                  -3.6790950298309326,
+                  -6.636789798736572,
+                  -3.4950859546661377,
+                  -1.8699946403503418,
+                  -0.31948938965797424,
+                  -1.240738034248352,
+                  -1.240738034248352,
+                  -1.7394917011260986,
+                  -0.86310875415802,
+                  -0.86310875415802,
+                  -3.724510431289673,
+                  -0.30595535039901733,
+                  -1.2703979015350342,
+                  -2.4694414138793945,
+                  -0.34643420577049255,
+                  -0.34643420577049255,
+                  -2.7118797302246094,
+                  -2.3370273113250732,
+                  -0.9129210114479065,
+                  -0.9763093590736389,
+                  -0.0496775321662426,
+                  -0.0496775321662426,
+                  -0.0496775321662426,
+                  -1.163669466972351,
+                  0,
+                  -0.6182336211204529,
+                  -2.4318864345550537,
+                  -3.2471201419830322,
+                  -0.17082014679908752,
+                  -13.046128273010254,
+                  -1.3649076223373413,
+                  -0.244353786110878,
+                  -1.8163899183273315,
+                  -0.12545901536941528,
+                  0,
+                  -5.985829830169678,
+                  -6.12298583984375,
+                  -2.9681429862976074,
+                  -0.9267756342887878,
+                  -1.6868162155151367,
+                  -0.3068425953388214,
+                  -0.3068425953388214,
+                  -0.3068425953388214,
+                  -0.947202742099762,
+                  0,
+                  -0.37794217467308044,
+                  -2.8985302448272705,
+                  -2.8786535263061523,
+                  -2.866515636444092,
+                  -2.8566222190856934,
+                  -2.8209104537963867,
+                  -2.8063671588897705,
+                  -2.790403127670288,
+                  -2.7793378829956055,
+                  -2.7776129245758057,
+                  -2.777026653289795,
+                  -2.9083333015441895,
+                  -2.884653329849243,
+                  -2.869385242462158,
+                  -2.858422040939331,
+                  -2.7765042781829834,
+                  -2.7761335372924805,
+                  -2.7808375358581543,
+                  -2.775444984436035,
+                  -2.7758185863494873,
+                  -2.7796571254730225,
+                  0,
+                  2.7737773304226883
+                ],
+                [
+                  -0.728436291217804,
+                  -0.7840164303779602,
+                  -0.39561912417411804,
+                  -0.39561912417411804,
+                  -0.5347018241882324,
+                  -0.27265670895576477,
+                  -0.2607920169830322,
+                  -0.7150791883468628,
+                  -0.3858520984649658,
+                  -0.39093998074531555,
+                  -0.7089971899986267,
+                  -0.7045531868934631,
+                  -0.7004109621047974,
+                  -1.189022421836853,
+                  -0.0014074339997023344,
+                  -0.37391623854637146,
+                  -0.37391623854637146,
+                  -0.6956064105033875,
+                  -0.6920740008354187,
+                  -0.6887772679328918,
+                  -13.810725212097168,
+                  -0.0034769063349813223,
+                  -14.142847061157227,
+                  -0.6856917142868042,
+                  -0.6831059455871582,
+                  13.43528938293457,
+                  0,
+                  -0.6301458477973938,
+                  -0.9217870831489563,
+                  0,
+                  0,
+                  5.029137134552002,
+                  -0.6291837692260742,
+                  0,
+                  -0.6999489665031433,
+                  -0.6283515095710754,
+                  -0.6275200247764587,
+                  -0.626719057559967,
+                  -0.33639153838157654,
+                  -0.5104833841323853,
+                  -0.1117454245686531,
+                  -0.6164299845695496,
+                  -0.3105510473251343,
+                  -0.3105510473251343,
+                  -0.6163061261177063,
+                  -0.6150946021080017,
+                  -0.6144202947616577,
+                  -0.6137529611587524,
+                  -0.6130892634391785,
+                  -0.6123544573783875,
+                  -0.6117035150527954,
+                  -0.6110488176345825,
+                  -0.610386312007904,
+                  -0.48767468333244324,
+                  -0.3569706082344055,
+                  0,
+                  -0.30741825699806213,
+                  -0.30741825699806213,
+                  13.984180450439453,
+                  -0.1852005273103714,
+                  0.4851745069026947,
+                  -0.20161192119121552,
+                  5.553133010864258,
+                  3.19411563873291,
+                  13.752372741699219,
+                  -0.20585449039936066,
+                  -0.20739081501960754,
+                  13.750701904296875,
+                  3.913572072982788,
+                  4.9295783042907715,
+                  4.9295783042907715,
+                  6.883187294006348,
+                  6.883187294006348,
+                  -1.5273654460906982,
+                  -3.888780117034912,
+                  -1.3643431663513184,
+                  -1.2558776140213013,
+                  -1.0092207193374634,
+                  -1.55893874168396,
+                  -1.745491623878479,
+                  -1.378749132156372,
+                  -0.36227548122406006,
+                  -0.29305264353752136,
+                  -2.696359634399414,
+                  -1.4447647333145142,
+                  -0.6047275066375732,
+                  -1.285086989402771,
+                  -0.6047275066375732,
+                  -0.5613164305686951,
+                  -0.3156576454639435,
+                  -0.1810351461172104,
+                  -0.1810351461172104,
+                  -1.0037826299667358,
+                  -0.19883021712303162,
+                  -0.19883021712303162,
+                  -0.8817289471626282,
+                  -0.7574883699417114,
+                  -1.696211814880371,
+                  -0.44169673323631287,
+                  -2.037544012069702,
+                  -1.7159500122070312,
+                  -1.26370370388031,
+                  -0.9611929059028625,
+                  -0.26541367173194885,
+                  -1.6404317617416382,
+                  -1.6404317617416382,
+                  -2.6537108421325684,
+                  -0.629760205745697,
+                  -0.629760205745697,
+                  -1.4350029230117798,
+                  -0.27989840507507324,
+                  -0.9186916947364807,
+                  -1.2350726127624512,
+                  -0.9003233313560486,
+                  -0.9003233313560486,
+                  -0.721144437789917,
+                  -1.0215809345245361,
+                  -0.07734066247940063,
+                  -0.6332495808601379,
+                  0,
+                  0,
+                  0,
+                  -0.2342405915260315,
+                  0,
+                  -0.3550336956977844,
+                  -0.748112142086029,
+                  -1.432059407234192,
+                  -0.23308566212654114,
+                  -1.4302752017974854,
+                  -0.5193546414375305,
+                  -0.1849222481250763,
+                  -0.08496293425559998,
+                  0,
+                  0,
+                  -1.0941370725631714,
+                  -1.6857515573501587,
+                  -0.9921250343322754,
+                  -0.28523001074790955,
+                  -0.4165087342262268,
+                  0,
+                  0,
+                  0,
+                  -0.28825587034225464,
+                  -1.1866910457611084,
+                  0,
+                  -0.9270036816596985,
+                  -0.9129499793052673,
+                  -0.8954988121986389,
+                  -0.8825612664222717,
+                  -0.866724967956543,
+                  -0.8550588488578796,
+                  -0.8433372378349304,
+                  -0.830091655254364,
+                  -0.8196890354156494,
+                  -0.809573769569397,
+                  -0.7983513474464417,
+                  -0.7894889116287231,
+                  -0.7809616923332214,
+                  -0.7728012204170227,
+                  -0.7650288939476013,
+                  -0.7567296028137207,
+                  -0.8326472043991089,
+                  -0.745010256767273,
+                  -0.7386958599090576,
+                  -0.8005157113075256,
+                  0,
+                  0.49810021354208567
+                ],
+                [
+                  -0.2249497026205063,
+                  -0.24306218326091766,
+                  -0.1237359344959259,
+                  -0.1237359344959259,
+                  -0.1728280484676361,
+                  -0.08807741850614548,
+                  -0.08254624903202057,
+                  -0.22491773962974548,
+                  -1.0347480773925781,
+                  0.15374387800693512,
+                  -0.22486449778079987,
+                  -0.2248302847146988,
+                  -0.2247956544160843,
+                  -0.20157504081726074,
+                  -0.023464560508728027,
+                  -0.11251842975616455,
+                  -0.11251842975616455,
+                  -0.22474460303783417,
+                  -0.22470496594905853,
+                  -0.22466927766799927,
+                  -0.16585946083068848,
+                  -0.05920489504933357,
+                  -0.06180519610643387,
+                  -0.224629744887352,
+                  -0.22458766400814056,
+                  -0.22384412586688995,
+                  -0.05899972468614578,
+                  -0.22454242408275604,
+                  -0.32358431816101074,
+                  0,
+                  0,
+                  -0.09964095056056976,
+                  -0.22450421750545502,
+                  0,
+                  -0.5912604331970215,
+                  -0.22445940971374512,
+                  -0.22442054748535156,
+                  -0.22438031435012817,
+                  -1.4474629163742065,
+                  -0.35730817914009094,
+                  0,
+                  -0.22433368861675262,
+                  -0.11231963336467743,
+                  -0.11231963336467743,
+                  -0.23662009835243225,
+                  -0.2242811918258667,
+                  -0.22423826158046722,
+                  -0.2241889089345932,
+                  -0.22414468228816986,
+                  -0.2240929901599884,
+                  -0.2240471988916397,
+                  -0.22399316728115082,
+                  -0.2239454686641693,
+                  -0.3418371379375458,
+                  -2.711482286453247,
+                  0,
+                  -0.11215602606534958,
+                  -0.11215602606534958,
+                  -0.22426959872245789,
+                  -0.014762614853680134,
+                  -0.03748733177781105,
+                  -0.01169164851307869,
+                  -0.09964095056056976,
+                  -0.5205221772193909,
+                  -0.22379259765148163,
+                  -0.007734674960374832,
+                  -0.0072374711744487286,
+                  -0.223730206489563,
+                  -0.10578258335590363,
+                  -0.5055505037307739,
+                  -0.5055505037307739,
+                  -0.11207449436187744,
+                  -0.11207449436187744,
+                  1.2384746074676514,
+                  13.780433654785156,
+                  0.22236725687980652,
+                  -0.22821199893951416,
+                  -1.7088477611541748,
+                  2.3273491859436035,
+                  3.0473737716674805,
+                  8.52579402923584,
+                  4.215794086456299,
+                  0.2507137358188629,
+                  13.998242378234863,
+                  -0.24978035688400269,
+                  2.8718156814575195,
+                  8.568557739257812,
+                  2.8718156814575195,
+                  5.696362495422363,
+                  9.547004699707031,
+                  0.32955455780029297,
+                  0.32955455780029297,
+                  0.4028785526752472,
+                  0.1495780348777771,
+                  0.1495780348777771,
+                  -0.7820258736610413,
+                  -0.6455528736114502,
+                  -1.49771249294281,
+                  -0.37004953622817993,
+                  -8.532776832580566,
+                  -1.4743188619613647,
+                  -2.1947884559631348,
+                  -5.619118690490723,
+                  -0.15149085223674774,
+                  -1.4732815027236938,
+                  -0.5206819772720337,
+                  -1.1657047271728516,
+                  -0.4834146797657013,
+                  -0.4834146797657013,
+                  -2.500659942626953,
+                  -0.22091861069202423,
+                  -1.5420863628387451,
+                  -4.058413028717041,
+                  -0.49973064661026,
+                  -0.49973064661026,
+                  -0.5265253186225891,
+                  -0.7692546844482422,
+                  -0.07283594459295273,
+                  -1.8355605602264404,
+                  -3.944796323776245,
+                  -3.944796323776245,
+                  -3.944796323776245,
+                  -0.8441882133483887,
+                  0,
+                  -0.02111711911857128,
+                  -1.0959618091583252,
+                  -0.7266826033592224,
+                  0,
+                  -0.7331620454788208,
+                  -0.2667081952095032,
+                  -0.10748278349637985,
+                  -0.02196476049721241,
+                  -0.012575852684676647,
+                  0,
+                  -0.6162831783294678,
+                  -0.6292804479598999,
+                  -0.5547469854354858,
+                  -0.07351307570934296,
+                  -0.27886059880256653,
+                  -1.326388955116272,
+                  -1.326388955116272,
+                  -1.326388955116272,
+                  -0.26348021626472473,
+                  -0.16005250811576843,
+                  0,
+                  -1.807903528213501,
+                  -1.797648310661316,
+                  -1.7869113683700562,
+                  -1.775692105293274,
+                  -0.4414762556552887,
+                  -0.42941033840179443,
+                  -0.4176272749900818,
+                  -0.4122997522354126,
+                  -0.4017564654350281,
+                  -0.39142921566963196,
+                  -1.8231110572814941,
+                  -1.8269884586334229,
+                  -1.8237210512161255,
+                  -1.8166371583938599,
+                  -0.36523041129112244,
+                  -0.35624340176582336,
+                  -0.4560820758342743,
+                  -0.34120893478393555,
+                  -0.3332642614841461,
+                  -0.4211669862270355,
+                  -0.8448132872581482,
+                  0.21882178846645786
+                ],
+                [
+                  -1.0663671493530273,
+                  -1.0828937292099,
+                  -0.5412998199462891,
+                  -0.5412998199462891,
+                  -3.1915483474731445,
+                  -0.050195008516311646,
+                  -3.1333959102630615,
+                  -1.0627790689468384,
+                  -0.5402395725250244,
+                  -0.5402395725250244,
+                  -1.0606123208999634,
+                  -1.0591570138931274,
+                  -1.057698369026184,
+                  -0.6550583839416504,
+                  -0.42044222354888916,
+                  -0.9062472581863403,
+                  -0.1685478687286377,
+                  -1.054796814918518,
+                  -1.0533297061920166,
+                  -1.05185866355896,
+                  -0.7666337490081787,
+                  -0.3095525801181793,
+                  -7.082787036895752,
+                  -1.0499070882797241,
+                  -1.0484282970428467,
+                  -0.775958776473999,
+                  -0.30515018105506897,
+                  -1.0464584827423096,
+                  -1.662754774093628,
+                  0,
+                  0,
+                  -1.2200268507003784,
+                  -1.0449713468551636,
+                  -3.1080148220062256,
+                  8.376255989074707,
+                  -1.0422990322113037,
+                  -1.0407911539077759,
+                  -1.0392787456512451,
+                  5.382715702056885,
+                  2.031622886657715,
+                  -2.843954086303711,
+                  -0.7939459085464478,
+                  -0.4072692394256592,
+                  -0.4072692394256592,
+                  -0.9117702841758728,
+                  -0.7913960218429565,
+                  -0.7896712422370911,
+                  -0.787940502166748,
+                  -0.7862032651901245,
+                  -0.7844597101211548,
+                  -0.7827095985412598,
+                  -0.7809529304504395,
+                  -0.7791896462440491,
+                  2.5237998962402344,
+                  -2.4179227352142334,
+                  -0.9132358431816101,
+                  -0.3998756408691406,
+                  -0.3998756408691406,
+                  -7.2078657150268555,
+                  0,
+                  -0.07500317692756653,
+                  0,
+                  -1.2200268507003784,
+                  1.6345093250274658,
+                  -0.7736375331878662,
+                  0,
+                  0,
+                  -0.7718445658683777,
+                  -0.26690149307250977,
+                  -0.26690149307250977,
+                  -0.26690149307250977,
+                  -0.3963610827922821,
+                  -0.3963610827922821,
+                  -4.892642974853516,
+                  -1.558431625366211,
+                  -2.0485641956329346,
+                  -2.86372447013855,
+                  0,
+                  -2.1225333213806152,
+                  -6.2884521484375,
+                  -2.4494335651397705,
+                  0,
+                  0,
+                  -2.0211703777313232,
+                  5.262971878051758,
+                  -2.021421194076538,
+                  -2.021421194076538,
+                  -2.021421194076538,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -2.0211703777313232,
+                  -2.0211703777313232,
+                  8.17756175994873,
+                  8.355988502502441,
+                  13.608927726745605,
+                  2.9289846420288086,
+                  -3.086665391921997,
+                  10.851799011230469,
+                  7.95641565322876,
+                  8.403363227844238,
+                  7.925325870513916,
+                  3.9102563858032227,
+                  3.9102563858032227,
+                  5.336148262023926,
+                  5.720114707946777,
+                  5.720114707946777,
+                  1.7132023572921753,
+                  4.616022109985352,
+                  -0.17885960638523102,
+                  0.29986372590065,
+                  3.0898945331573486,
+                  3.0898945331573486,
+                  2.6674749851226807,
+                  -10.983927726745605,
+                  5.788444519042969,
+                  -2.8351023197174072,
+                  -0.2221565842628479,
+                  -1.0218534469604492,
+                  -1.0218534469604492,
+                  -3.197567939758301,
+                  -2.86372447013855,
+                  -1.2456308603286743,
+                  -2.090603828430176,
+                  -1.8944497108459473,
+                  -0.8379386067390442,
+                  -2.2463505268096924,
+                  -7.68137264251709,
+                  -0.6736705899238586,
+                  -1.1590569019317627,
+                  -1.6240835189819336,
+                  -7.121267318725586,
+                  -7.119646072387695,
+                  -7.15257453918457,
+                  -1.0994622707366943,
+                  -1.4174972772598267,
+                  -1.9820599555969238,
+                  0,
+                  0,
+                  0,
+                  -0.11995158344507217,
+                  -0.19179797172546387,
+                  -1.5014359951019287,
+                  -1.0966432094573975,
+                  -1.095199465751648,
+                  -1.0937600135803223,
+                  -1.0923234224319458,
+                  -1.0908198356628418,
+                  -1.0893731117248535,
+                  -1.0879241228103638,
+                  -1.086472749710083,
+                  -1.0850193500518799,
+                  -1.0835636854171753,
+                  -1.0923008918762207,
+                  -1.0830141305923462,
+                  -1.0809211730957031,
+                  -1.0793685913085938,
+                  -1.077754020690918,
+                  -1.076328158378601,
+                  -1.092700481414795,
+                  -1.0734846591949463,
+                  -1.072052001953125,
+                  -1.0884922742843628,
+                  0,
+                  1.1041156868537778
+                ],
+                [
+                  -0.041026774793863297,
+                  -0.07504693418741226,
+                  -0.03464356064796448,
+                  -0.03464356064796448,
+                  -0.07094684988260269,
+                  -0.024494919925928116,
+                  -0.0353119783103466,
+                  -0.03306214511394501,
+                  -0.015341565944254398,
+                  -2.333331346511841,
+                  -0.031039152294397354,
+                  -0.029811806976795197,
+                  -0.02863287553191185,
+                  -0.1376335173845291,
+                  -0.007122124545276165,
+                  -1.1110436916351318,
+                  -0.0038260770961642265,
+                  -0.026886137202382088,
+                  -0.025822415947914124,
+                  -0.024800678715109825,
+                  -0.05317132547497749,
+                  -0.016022108495235443,
+                  -0.7165693044662476,
+                  -0.02302877977490425,
+                  -0.022117096930742264,
+                  -0.02862739935517311,
+                  -0.011655662208795547,
+                  -0.020050516352057457,
+                  -0.42495211958885193,
+                  0,
+                  0,
+                  0,
+                  -0.01925603486597538,
+                  -0.006151529960334301,
+                  -0.006151529960334301,
+                  -0.018209191039204597,
+                  -0.017487259581685066,
+                  -0.016793888062238693,
+                  -3.1310362815856934,
+                  -4.991283893585205,
+                  0,
+                  -0.016127949580550194,
+                  -0.014689111150801182,
+                  -0.014689111150801182,
+                  -0.17379418015480042,
+                  -0.0149069894105196,
+                  -0.014315665699541569,
+                  -0.0137477470561862,
+                  -0.013202311471104622,
+                  -0.012678469531238079,
+                  -0.012175369076430798,
+                  -0.011692189611494541,
+                  -0.011228146962821484,
+                  -0.0764426738023758,
+                  2.512948989868164,
+                  -0.0764426738023758,
+                  -0.00804671086370945,
+                  -0.00804671086370945,
+                  -0.7165693044662476,
+                  0,
+                  -0.004578117746859789,
+                  0,
+                  0,
+                  -0.946526050567627,
+                  -0.0077368454076349735,
+                  0,
+                  0,
+                  -0.00742961885407567,
+                  -0.0064254021272063255,
+                  -0.0064254021272063255,
+                  -0.0064254021272063255,
+                  -0.006535525433719158,
+                  -0.006535525433719158,
+                  2.6083524227142334,
+                  -4.509296417236328,
+                  0.5456820726394653,
+                  -1.2886829376220703,
+                  -1.1991325616836548,
+                  0.6893875598907471,
+                  -1.9675167798995972,
+                  5.002658843994141,
+                  -1.1268706321716309,
+                  -2.7838542461395264,
+                  -1.7763680219650269,
+                  -0.5871873497962952,
+                  0,
+                  -0.05177520215511322,
+                  0,
+                  -0.05177520215511322,
+                  -3.5444064140319824,
+                  -0.8050656914710999,
+                  -0.8050656914710999,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.07486145198345184,
+                  -6.63855504989624,
+                  -6.63855504989624,
+                  16.094892501831055,
+                  0,
+                  -9.726151466369629,
+                  -3.4342870712280273,
+                  -9.706236839294434,
+                  -0.4845883548259735,
+                  -0.1662297397851944,
+                  -0.4025874435901642,
+                  -1.0490585565567017,
+                  -1.0490585565567017,
+                  4.875487804412842,
+                  -7.126871585845947,
+                  0.8214125633239746,
+                  12.880413055419922,
+                  0,
+                  0,
+                  -0.23532217741012573,
+                  -1.0338155031204224,
+                  -4.753906726837158,
+                  10.631400108337402,
+                  5.37383508682251,
+                  4.270384311676025,
+                  4.270384311676025,
+                  6.787928581237793,
+                  -1.1569088697433472,
+                  3.4865078926086426,
+                  7.020167827606201,
+                  -3.8043887615203857,
+                  -9.618367195129395,
+                  -3.7953920364379883,
+                  -3.7877087593078613,
+                  -0.23532217741012573,
+                  -4.687094211578369,
+                  -0.16718390583992004,
+                  -0.07486145198345184,
+                  -9.800667762756348,
+                  -1.7463808059692383,
+                  -0.37787821888923645,
+                  -9.86116886138916,
+                  -9.838691711425781,
+                  -0.39521563053131104,
+                  -0.39521563053131104,
+                  -0.39521563053131104,
+                  -0.10254381597042084,
+                  -0.09766427427530289,
+                  -0.025849616155028343,
+                  -0.6223855018615723,
+                  -0.23069240152835846,
+                  -0.21513542532920837,
+                  -0.20129017531871796,
+                  -0.15615308284759521,
+                  -0.14991575479507446,
+                  -0.14392711222171783,
+                  -0.13817724585533142,
+                  -0.13265666365623474,
+                  -0.12735623121261597,
+                  -0.6854468584060669,
+                  -0.21362575888633728,
+                  -0.20089732110500336,
+                  -0.18501654267311096,
+                  -0.10594963282346725,
+                  -0.10171166062355042,
+                  -0.2021457850933075,
+                  -0.09072410315275192,
+                  -0.08709333837032318,
+                  -0.17339541018009186,
+                  -0.25213342905044556,
+                  -2.7177499296516103
+                ],
+                [
+                  -0.26151353120803833,
+                  -0.4462585151195526,
+                  -0.21186316013336182,
+                  -0.21186316013336182,
+                  -0.34899428486824036,
+                  -0.15687713027000427,
+                  -0.1602558046579361,
+                  -0.237176775932312,
+                  -0.18758146464824677,
+                  -0.18758146464824677,
+                  -0.22176384925842285,
+                  -0.21389669179916382,
+                  -0.2063031792640686,
+                  -0.3902176022529602,
+                  -0.08466174453496933,
+                  -0.4937405586242676,
+                  -0.05417238175868988,
+                  -0.1934266984462738,
+                  -0.18653303384780884,
+                  -0.17988057434558868,
+                  -13.707140922546387,
+                  -0.0595344640314579,
+                  14.078437805175781,
+                  -0.09560337662696838,
+                  -0.0920640379190445,
+                  -0.008721305988729,
+                  -0.005796018522232771,
+                  -0.0876917913556099,
+                  -1.0120515823364258,
+                  0,
+                  0,
+                  0,
+                  -0.08443877846002579,
+                  -0.012684430927038193,
+                  -0.015613298863172531,
+                  -0.08071593940258026,
+                  -0.0777171328663826,
+                  -0.0748286098241806,
+                  0.05376022309064865,
+                  0.30298611521720886,
+                  -0.7390134334564209,
+                  -0.040797438472509384,
+                  -0.036114390939474106,
+                  -0.036114390939474106,
+                  0.021778928115963936,
+                  -0.023884980008006096,
+                  -0.022931646555662155,
+                  -0.022016294300556183,
+                  -0.021137414500117302,
+                  -0.020293552428483963,
+                  -0.01948331855237484,
+                  -0.018705373629927635,
+                  -0.01795843616127968,
+                  -3.312429666519165,
+                  4.26625919342041,
+                  -1.487941026687622,
+                  -0.007391214836388826,
+                  -0.007391214836388826,
+                  0.28308096528053284,
+                  -0.8148256540298462,
+                  0,
+                  -0.7228430509567261,
+                  0,
+                  -1.7458981275558472,
+                  0,
+                  -0.6540623307228088,
+                  -0.5995417237281799,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.8399404883384705,
+                  0,
+                  -1.1959813833236694,
+                  -0.023523906245827675,
+                  0,
+                  0,
+                  -2.2247941493988037,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.7325409054756165,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -3.2041432857513428,
+                  -0.9994550943374634,
+                  -0.5810967087745667,
+                  -0.5810967087745667,
+                  -1.7955633401870728,
+                  -3.2041432857513428,
+                  -2.258477210998535,
+                  -1.4749860763549805,
+                  -0.3282442092895508,
+                  -2.354675054550171,
+                  -2.338012933731079,
+                  4.899129867553711,
+                  -1.392245888710022,
+                  -1.392245888710022,
+                  3.046647787094116,
+                  0,
+                  -0.5441577434539795,
+                  -1.3861193656921387,
+                  -1.4339663982391357,
+                  -1.4339663982391357,
+                  5.882251739501953,
+                  0.8451896905899048,
+                  -0.597392737865448,
+                  -2.7642569541931152,
+                  0,
+                  -0.3708527684211731,
+                  -0.3708527684211731,
+                  -0.750393807888031,
+                  -0.023523906245827675,
+                  0,
+                  -2.051722764968872,
+                  14.040074348449707,
+                  2.364804267883301,
+                  14.233588218688965,
+                  13.714077949523926,
+                  7.704743385314941,
+                  7.205214500427246,
+                  8.671878814697266,
+                  1.8245477676391602,
+                  -2.291078805923462,
+                  -2.379916191101074,
+                  -0.8263279795646667,
+                  -0.7802924513816833,
+                  -1.2516082525253296,
+                  -0.3266853392124176,
+                  -0.3266853392124176,
+                  -0.3266853392124176,
+                  -0.2894669771194458,
+                  -0.2196318358182907,
+                  -0.3173918128013611,
+                  -1.0675771236419678,
+                  -0.6585986614227295,
+                  -0.6542891263961792,
+                  -0.6391481161117554,
+                  -0.5723563432693481,
+                  -0.551406979560852,
+                  -0.5312139391899109,
+                  -0.511750340461731,
+                  -0.4929903447628021,
+                  -0.4749089479446411,
+                  -1.069414496421814,
+                  -0.6254501342773438,
+                  -0.588263750076294,
+                  -0.5472024083137512,
+                  -0.40096747875213623,
+                  -0.38619908690452576,
+                  -0.619608461856842,
+                  -0.3499574661254883,
+                  -0.33703264594078064,
+                  -0.5643059015274048,
+                  -0.008999009616672993,
+                  -0.236970779566672
+                ],
+                [
+                  -0.6091940402984619,
+                  -0.7862005829811096,
+                  -0.39601650834083557,
+                  -0.39601650834083557,
+                  -0.5913777947425842,
+                  -0.29551905393600464,
+                  -0.2747594714164734,
+                  -0.5616490244865417,
+                  -0.37482190132141113,
+                  -0.37482190132141113,
+                  -0.5454356074333191,
+                  -0.5368140339851379,
+                  -0.5281658172607422,
+                  -0.42122483253479004,
+                  -0.8740792870521545,
+                  -0.24878953397274017,
+                  -0.6481668949127197,
+                  -1.2313774824142456,
+                  -0.4988069534301758,
+                  -0.4925536811351776,
+                  -1.6473209857940674,
+                  -0.07560208439826965,
+                  -0.06437497586011887,
+                  -0.4855442941188812,
+                  -0.48034045100212097,
+                  -0.4147513508796692,
+                  -0.03339610993862152,
+                  -0.4749244749546051,
+                  0.6609310507774353,
+                  -1.0735679864883423,
+                  -1.0735679864883423,
+                  -1.5425200462341309,
+                  -0.4583743214607239,
+                  -0.0063440827652812,
+                  -0.6796126961708069,
+                  -0.4554346799850464,
+                  -0.45281320810317993,
+                  -0.45053327083587646,
+                  -0.08055797219276428,
+                  -0.22233550250530243,
+                  -0.22233550250530243,
+                  -0.41637635231018066,
+                  -0.21895842254161835,
+                  -0.21895842254161835,
+                  -0.416007399559021,
+                  -0.4158344268798828,
+                  -0.4156785011291504,
+                  -0.41553351283073425,
+                  -0.4153851568698883,
+                  -0.4152502119541168,
+                  -0.41510578989982605,
+                  -0.41496047377586365,
+                  -0.41481390595436096,
+                  -0.09028999507427216,
+                  -1.1718553304672241,
+                  -0.017145195975899696,
+                  -0.20776121318340302,
+                  -0.20776121318340302,
+                  -0.8906280398368835,
+                  0,
+                  -0.09727846831083298,
+                  0,
+                  -0.14796334505081177,
+                  -0.11716113984584808,
+                  -0.41447263956069946,
+                  0,
+                  0,
+                  -0.4143105745315552,
+                  -0.14259138703346252,
+                  -0.1363295614719391,
+                  -0.1363295614719391,
+                  -0.20758678019046783,
+                  -0.20758678019046783,
+                  -4.206230163574219,
+                  -0.4141821563243866,
+                  -1.1528146266937256,
+                  -0.12377094477415085,
+                  -0.002872064709663391,
+                  -0.11721526831388474,
+                  -0.286862850189209,
+                  -0.39438357949256897,
+                  0,
+                  0,
+                  -0.4149773120880127,
+                  -0.19951902329921722,
+                  -0.05060642957687378,
+                  -0.17158201336860657,
+                  -0.05060642957687378,
+                  -0.11974213272333145,
+                  0,
+                  -0.11282557994127274,
+                  -0.11282557994127274,
+                  -0.005624980665743351,
+                  -0.016918018460273743,
+                  -0.016918018460273743,
+                  -0.7125713229179382,
+                  -0.6934071183204651,
+                  -0.4137571454048157,
+                  -0.05513733625411987,
+                  -0.39535555243492126,
+                  -0.6675403118133545,
+                  -0.19716888666152954,
+                  -1.0348858833312988,
+                  0,
+                  -0.037041421979665756,
+                  -0.037041421979665756,
+                  -0.3227701485157013,
+                  -0.08412131667137146,
+                  -0.08412131667137146,
+                  -0.24055215716362,
+                  -1.0348858833312988,
+                  -3.1778626441955566,
+                  1.0279901027679443,
+                  -0.27649328112602234,
+                  -0.27649328112602234,
+                  -0.10971798747777939,
+                  -0.24556367099285126,
+                  0,
+                  -0.15598294138908386,
+                  -0.26469486951828003,
+                  0.13151462376117706,
+                  0.13151462376117706,
+                  -1.1499152183532715,
+                  0,
+                  -1.3142393827438354,
+                  0.5086257457733154,
+                  -0.3950731158256531,
+                  -0.016287267208099365,
+                  -0.3948764204978943,
+                  -0.1506364494562149,
+                  -0.041289109736680984,
+                  0,
+                  0,
+                  0,
+                  13.530637741088867,
+                  13.96921443939209,
+                  13.914234161376953,
+                  12.715877532958984,
+                  12.534770965576172,
+                  4.727413654327393,
+                  4.727413654327393,
+                  4.727413654327393,
+                  0.8140560984611511,
+                  0.47271066904067993,
+                  0.2857230603694916,
+                  -1.5353249311447144,
+                  -1.442793369293213,
+                  -1.3752379417419434,
+                  -1.309645175933838,
+                  -1.0697122812271118,
+                  -1.0353831052780151,
+                  -1.00209379196167,
+                  -0.9698154926300049,
+                  -0.9385204315185547,
+                  -0.9081814885139465,
+                  -1.4577687978744507,
+                  -1.4641669988632202,
+                  -1.4061731100082397,
+                  -1.3407444953918457,
+                  -0.8248424530029297,
+                  -0.7996370792388916,
+                  -1.1261098384857178,
+                  -0.7599660754203796,
+                  -0.7381603121757507,
+                  -1.0029516220092773,
+                  0,
+                  0.3837794642020848
+                ],
+                [
+                  -4.6154913902282715,
+                  -5.554482460021973,
+                  -2.8468964099884033,
+                  -2.8468964099884033,
+                  -4.066209316253662,
+                  -2.028353214263916,
+                  -1.9608583450317383,
+                  -4.3948798179626465,
+                  -2.6812894344329834,
+                  -2.7178637981414795,
+                  -4.302061080932617,
+                  -4.24639892578125,
+                  -4.18458366394043,
+                  -2.4933063983917236,
+                  -2.4933063983917236,
+                  -2.4604010581970215,
+                  -2.4604010581970215,
+                  -4.177481651306152,
+                  -4.047595024108887,
+                  -4.00409460067749,
+                  -3.8569703102111816,
+                  -1.1194106340408325,
+                  -1.0536524057388306,
+                  -3.9467906951904297,
+                  -3.9071526527404785,
+                  -3.4463531970977783,
+                  -0.7800935506820679,
+                  -3.8613810539245605,
+                  -1.5609276294708252,
+                  -0.6117425560951233,
+                  -0.6117425560951233,
+                  -1.2171382904052734,
+                  -3.8210973739624023,
+                  -0.152041494846344,
+                  -0.9849874973297119,
+                  -3.78181529045105,
+                  -3.750378370285034,
+                  -3.7204370498657227,
+                  -3.276887893676758,
+                  -1.989703893661499,
+                  -1.989703893661499,
+                  -3.613438367843628,
+                  -1.9601424932479858,
+                  -1.9601424932479858,
+                  -3.5800278186798096,
+                  -3.5572192668914795,
+                  -3.535895347595215,
+                  -3.5179100036621094,
+                  -3.4995296001434326,
+                  -3.4824016094207764,
+                  -3.466442584991455,
+                  -3.453145742416382,
+                  -3.439560890197754,
+                  -1.3642945289611816,
+                  -1.3447953462600708,
+                  -1.3187001943588257,
+                  -1.7889702320098877,
+                  -1.7889702320098877,
+                  -3.560636520385742,
+                  -0.25234454870224,
+                  -0.8084860444068909,
+                  -0.18603608012199402,
+                  -0.9491934776306152,
+                  -1.4612751007080078,
+                  -3.4091806411743164,
+                  -0.10277779400348663,
+                  -0.09262135624885559,
+                  -3.399268865585327,
+                  -1.210676908493042,
+                  -1.1552624702453613,
+                  -1.1552624702453613,
+                  -1.7500756978988647,
+                  -1.7500756978988647,
+                  -3.796396017074585,
+                  -3.3971879482269287,
+                  -1.0850605964660645,
+                  -1.0564817190170288,
+                  -1.2314348220825195,
+                  -2.3657515048980713,
+                  3.2727138996124268,
+                  -4.1956048011779785,
+                  -1.1361498832702637,
+                  -0.5955400466918945,
+                  -3.4656686782836914,
+                  -1.9284733533859253,
+                  -0.4986240565776825,
+                  -1.4666759967803955,
+                  -0.4986240565776825,
+                  -0.9611964225769043,
+                  -2.7638399600982666,
+                  -0.08664588630199432,
+                  -0.08664588630199432,
+                  -0.05153125151991844,
+                  -0.17426137626171112,
+                  -0.17426137626171112,
+                  -1.0809361934661865,
+                  -1.0137953758239746,
+                  -3.36386775970459,
+                  -0.19888432323932648,
+                  -3.3413822650909424,
+                  -3.341787099838257,
+                  -1.7828595638275146,
+                  -0.574260413646698,
+                  -0.2895481586456299,
+                  -1.986889123916626,
+                  -0.6990332007408142,
+                  -1.1808269023895264,
+                  -0.6724973917007446,
+                  -0.6724973917007446,
+                  -2.142507791519165,
+                  -0.2132791429758072,
+                  -0.8237952589988708,
+                  -2.27504825592041,
+                  -0.3857131898403168,
+                  -0.3857131898403168,
+                  -0.6409314870834351,
+                  -2.155808925628662,
+                  0,
+                  -1.2462011575698853,
+                  -0.7887621521949768,
+                  -0.7887621521949768,
+                  -0.7887621521949768,
+                  -0.26639270782470703,
+                  0,
+                  -0.4405248463153839,
+                  -1.001326560974121,
+                  -3.3296914100646973,
+                  -0.02910475805401802,
+                  -3.325317621231079,
+                  -1.2069921493530273,
+                  -0.5953419208526611,
+                  -0.22201864421367645,
+                  -0.09400573372840881,
+                  -0.04541447386145592,
+                  -3.3169519901275635,
+                  -3.3183305263519287,
+                  -3.321089744567871,
+                  -1.07028067111969,
+                  -1.149895191192627,
+                  -2.186809778213501,
+                  -2.186809778213501,
+                  -2.186809778213501,
+                  -0.628298819065094,
+                  0,
+                  0,
+                  10.995243072509766,
+                  10.996756553649902,
+                  10.996478080749512,
+                  10.996234893798828,
+                  10.993212699890137,
+                  10.993063926696777,
+                  10.992907524108887,
+                  10.992742538452148,
+                  10.992573738098145,
+                  10.992393493652344,
+                  10.995281219482422,
+                  10.99770450592041,
+                  10.997565269470215,
+                  10.997355461120605,
+                  10.992751121520996,
+                  10.992561340332031,
+                  10.993999481201172,
+                  10.99222183227539,
+                  10.991999626159668,
+                  10.993624687194824,
+                  -1.2861472368240356,
+                  3.2918305185351384
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "oi"
+      ],
+      [
+        "pt",
+        "olá"
+      ],
+      [
+        "pt",
+        "ola"
+      ],
+      [
+        "pt",
+        "bom dia"
+      ],
+      [
+        "pt",
+        "boa tarde"
+      ],
+      [
+        "pt",
+        "boa noite"
+      ],
+      [
+        "pt",
+        "hey"
+      ],
+      [
+        "pt",
+        "e aí"
+      ],
+      [
+        "pt",
+        "opa"
+      ],
+      [
+        "pt",
+        "eai"
+      ],
+      [
+        "pt",
+        "salve"
+      ],
+      [
+        "pt",
+        "como vai?"
+      ],
+      [
+        "pt",
+        "tudo bem?"
+      ],
+      [
+        "pt",
+        "fala"
+      ],
+      [
+        "pt",
+        "coé"
+      ],
+      [
+        "pt",
+        "tchau"
+      ],
+      [
+        "pt",
+        "até logo"
+      ],
+      [
+        "pt",
+        "até mais"
+      ],
+      [
+        "pt",
+        "adeus"
+      ],
+      [
+        "pt",
+        "falou"
+      ],
+      [
+        "pt",
+        "até depois"
+      ],
+      [
+        "pt",
+        "até breve"
+      ],
+      [
+        "pt",
+        "flw"
+      ],
+      [
+        "pt",
+        "a gente se fala"
+      ],
+      [
+        "pt",
+        "até a próxima"
+      ],
+      [
+        "pt",
+        "fui"
+      ],
+      [
+        "pt",
+        "tenha uma boa noite"
+      ],
+      [
+        "pt",
+        "sim"
+      ],
+      [
+        "pt",
+        "claro"
+      ],
+      [
+        "pt",
+        "ok"
+      ],
+      [
+        "pt",
+        "quero"
+      ],
+      [
+        "pt",
+        "pode ser"
+      ],
+      [
+        "pt",
+        "beleza"
+      ],
+      [
+        "pt",
+        "com certeza"
+      ],
+      [
+        "pt",
+        "isso"
+      ],
+      [
+        "pt",
+        "perfeito"
+      ],
+      [
+        "pt",
+        "correto"
+      ],
+      [
+        "pt",
+        "positivo"
+      ],
+      [
+        "pt",
+        "fechado"
+      ],
+      [
+        "pt",
+        "demorou"
+      ],
+      [
+        "pt",
+        "blz"
+      ],
+      [
+        "pt",
+        "s"
+      ],
+      [
+        "pt",
+        "aham"
+      ],
+      [
+        "pt",
+        "gostei da ideia"
+      ],
+      [
+        "pt",
+        "manda bala"
+      ],
+      [
+        "pt",
+        "não"
+      ],
+      [
+        "pt",
+        "nao"
+      ],
+      [
+        "pt",
+        "não quero"
+      ],
+      [
+        "pt",
+        "nao quero"
+      ],
+      [
+        "pt",
+        "agora não"
+      ],
+      [
+        "pt",
+        "talvez depois"
+      ],
+      [
+        "pt",
+        "depois"
+      ],
+      [
+        "pt",
+        "não obrigado"
+      ],
+      [
+        "pt",
+        "deixa pra próxima"
+      ],
+      [
+        "pt",
+        "dispenso"
+      ],
+      [
+        "pt",
+        "melhor não"
+      ],
+      [
+        "pt",
+        "não, valeu"
+      ],
+      [
+        "pt",
+        "passo"
+      ],
+      [
+        "pt",
+        "de jeito nenhum"
+      ],
+      [
+        "pt",
+        "nem pensar"
+      ],
+      [
+        "pt",
+        "ver produtos"
+      ],
+      [
+        "pt",
+        "mostrar produtos"
+      ],
+      [
+        "pt",
+        "quais produtos vocês têm"
+      ],
+      [
+        "pt",
+        "quais produtos voces tem"
+      ],
+      [
+        "pt",
+        "o que vocês vendem"
+      ],
+      [
+        "pt",
+        "o que tem disponível"
+      ],
+      [
+        "pt",
+        "produtos"
+      ],
+      [
+        "pt",
+        "catálogo"
+      ],
+      [
+        "pt",
+        "catalogo"
+      ],
+      [
+        "pt",
+        "o que tem"
+      ],
+      [
+        "pt",
+        "mostrar catálogo"
+      ],
+      [
+        "pt",
+        "quero ver produtos"
+      ],
+      [
+        "pt",
+        "me mostra as opções"
+      ],
+      [
+        "pt",
+        "quais as novidades?"
+      ],
+      [
+        "pt",
+        "ver o cardápio"
+      ],
+      [
+        "pt",
+        "o que você tem pra vender?"
+      ],
+      [
+        "pt",
+        "lista de produtos"
+      ],
+      [
+        "pt",
+        "me apresenta seu catálogo"
+      ],
+      [
+        "pt",
+        "tem o que aí?"
+      ],
+      [
+        "pt",
+        "quero este"
+      ],
+      [
+        "pt",
+        "quero um"
+      ],
+      [
+        "pt",
+        "quero uma"
+      ],
+      [
+        "pt",
+        "adicionar ao carrinho"
+      ],
+      [
+        "pt",
+        "quero comprar"
+      ],
+      [
+        "pt",
+        "adicionar"
+      ],
+      [
+        "pt",
+        "quero"
+      ],
+      [
+        "pt",
+        "me adiciona"
+      ],
+      [
+        "pt",
+        "adiciona no carrinho"
+      ],
+      [
+        "pt",
+        "coloca no carrinho"
+      ],
+      [
+        "pt",
+        "comprar"
+      ],
+      [
+        "pt",
+        "vou levar esse"
+      ],
+      [
+        "pt",
+        "põe na sacola"
+      ],
+      [
+        "pt",
+        "incluir no meu pedido"
+      ],
+      [
+        "pt",
+        "separa esse pra mim"
+      ],
+      [
+        "pt",
+        "gostei desse, adiciona"
+      ],
+      [
+        "pt",
+        "quero comprar este item"
+      ],
+      [
+        "pt",
+        "pode por no carrinho"
+      ],
+      [
+        "pt",
+        "ver carrinho"
+      ],
+      [
+        "pt",
+        "meu carrinho"
+      ],
+      [
+        "pt",
+        "carrinho"
+      ],
+      [
+        "pt",
+        "o que tem no carrinho"
+      ],
+      [
+        "pt",
+        "mostrar carrinho"
+      ],
+      [
+        "pt",
+        "ver meu pedido"
+      ],
+      [
+        "pt",
+        "ver pedido"
+      ],
+      [
+        "pt",
+        "ver o carrinho"
+      ],
+      [
+        "pt",
+        "mostrar meu carrinho"
+      ],
+      [
+        "pt",
+        "minha sacola"
+      ],
+      [
+        "pt",
+        "ver minha sacola"
+      ],
+      [
+        "pt",
+        "o que eu já escolhi?"
+      ],
+      [
+        "pt",
+        "quais itens estão no carrinho?"
+      ],
+      [
+        "pt",
+        "revisar meu pedido"
+      ],
+      [
+        "pt",
+        "mostrar itens da compra"
+      ],
+      [
+        "pt",
+        "remover do carrinho"
+      ],
+      [
+        "pt",
+        "tirar do carrinho"
+      ],
+      [
+        "pt",
+        "remover"
+      ],
+      [
+        "pt",
+        "tirar"
+      ],
+      [
+        "pt",
+        "excluir do carrinho"
+      ],
+      [
+        "pt",
+        "não quero mais"
+      ],
+      [
+        "pt",
+        "nao quero mais"
+      ],
+      [
+        "pt",
+        "remover item"
+      ],
+      [
+        "pt",
+        "excluir item"
+      ],
+      [
+        "pt",
+        "pode tirar isso"
+      ],
+      [
+        "pt",
+        "desisti desse item"
+      ],
+      [
+        "pt",
+        "não vou levar mais esse"
+      ],
+      [
+        "pt",
+        "tira da sacola"
+      ],
+      [
+        "pt",
+        "cancela esse item"
+      ],
+      [
+        "pt",
+        "quero excluir um produto"
+      ],
+      [
+        "pt",
+        "finalizar compra"
+      ],
+      [
+        "pt",
+        "quero pagar"
+      ],
+      [
+        "pt",
+        "checkout"
+      ],
+      [
+        "pt",
+        "pagar"
+      ],
+      [
+        "pt",
+        "concluir pedido"
+      ],
+      [
+        "pt",
+        "finalizar"
+      ],
+      [
+        "pt",
+        "fechar pedido"
+      ],
+      [
+        "pt",
+        "finalizar pedido"
+      ],
+      [
+        "pt",
+        "quero finalizar"
+      ],
+      [
+        "pt",
+        "ir para o pagamento"
+      ],
+      [
+        "pt",
+        "fechar a conta"
+      ],
+      [
+        "pt",
+        "como faço pra pagar?"
+      ],
+      [
+        "pt",
+        "pronto, quero fechar a compra"
+      ],
+      [
+        "pt",
+        "concluir a compra"
+      ],
+      [
+        "pt",
+        "já escolhi tudo, quero pagar"
+      ],
+      [
+        "pt",
+        "1"
+      ],
+      [
+        "pt",
+        "2"
+      ],
+      [
+        "pt",
+        "3"
+      ],
+      [
+        "pt",
+        "4"
+      ],
+      [
+        "pt",
+        "5"
+      ],
+      [
+        "pt",
+        "6"
+      ],
+      [
+        "pt",
+        "7"
+      ],
+      [
+        "pt",
+        "8"
+      ],
+      [
+        "pt",
+        "9"
+      ],
+      [
+        "pt",
+        "10"
+      ],
+      [
+        "pt",
+        "primeiro"
+      ],
+      [
+        "pt",
+        "segundo"
+      ],
+      [
+        "pt",
+        "terceiro"
+      ],
+      [
+        "pt",
+        "quarto"
+      ],
+      [
+        "pt",
+        "quinto"
+      ],
+      [
+        "pt",
+        "sexto"
+      ],
+      [
+        "pt",
+        "sétimo"
+      ],
+      [
+        "pt",
+        "setimo"
+      ],
+      [
+        "pt",
+        "oitavo"
+      ],
+      [
+        "pt",
+        "nono"
+      ],
+      [
+        "pt",
+        "décimo"
+      ],
+      [
+        "pt",
+        "decimo"
+      ],
+      [
+        "pt",
+        "quero o primeiro"
+      ],
+      [
+        "pt",
+        "quero o segundo"
+      ],
+      [
+        "pt",
+        "quero o terceiro"
+      ],
+      [
+        "pt",
+        "quero o quarto"
+      ],
+      [
+        "pt",
+        "quero o 1"
+      ],
+      [
+        "pt",
+        "quero o 2"
+      ],
+      [
+        "pt",
+        "quero o 3"
+      ],
+      [
+        "pt",
+        "quero o 4"
+      ],
+      [
+        "pt",
+        "me dá o primeiro"
+      ],
+      [
+        "pt",
+        "me dá o 1"
+      ],
+      [
+        "pt",
+        "vou querer o primeiro"
+      ],
+      [
+        "pt",
+        "vou querer o 1"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner"
+    },
+    "rules": {
+      "pt": {
+        "camiseta": {
+          "name": "camiseta",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "camiseta verde",
+              "texts": [
+                "camiseta verde",
+                "camiseta",
+                "verde",
+                "camiseta verde",
+                "verde camiseta"
+              ]
+            },
+            {
+              "option": "camiseta vermelha",
+              "texts": [
+                "camiseta vermelha",
+                "camiseta",
+                "vermelha",
+                "camiseta vermelha",
+                "vermelha camiseta"
+              ]
+            }
+          ]
+        },
+        "calça": {
+          "name": "calça",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "calça azul",
+              "texts": [
+                "calça azul",
+                "calça",
+                "azul",
+                "calça azul",
+                "azul calça"
+              ]
+            },
+            {
+              "option": "calça verde",
+              "texts": [
+                "calça verde",
+                "calça",
+                "verde",
+                "calça verde",
+                "verde calça"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

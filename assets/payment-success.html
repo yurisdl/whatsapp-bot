@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Pagamento Aprovado</title>
+    <style>
+        .success-icon {
+            font-size: 80px;
+            color: #28a745;
+        }
+        .container-success {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-success">
+        <div class="text-center">
+            <div class="success-icon">✓</div>
+            <h1 class="mt-4 mb-3">Pagamento Aprovado!</h1>
+            <p class="lead mb-4">Seu pedido foi confirmado com sucesso.</p>
+            <div class="alert alert-success" role="alert">
+                <strong>ID do Pagamento:</strong> <span id="paymentId"></span>
+            </div>
+            <p class="text-muted">Você receberá uma confirmação em breve.</p>
+        </div>
+    </div>
+
+    <script>
+        // Extrair informações da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('payment_id') || urlParams.get('collection_id');
+        const userId = urlParams.get('userId');
+
+        if (paymentId) {
+            document.getElementById('paymentId').textContent = paymentId;
+
+            // Verificar se já processou este pagamento
+            const processedKey = `processed_${paymentId}`;
+            const alreadyProcessed = sessionStorage.getItem(processedKey);
+
+            if (!alreadyProcessed) {
+                // Processar o pedido no backend apenas uma vez
+                processPayment(paymentId, userId);
+                // Marcar como processado (apenas durante esta sessão)
+                sessionStorage.setItem(processedKey, 'true');
+            } else {
+                console.log('✅ Pagamento já foi processado anteriormente');
+            }
+        }
+
+        async function processPayment(paymentId, userId) {
+            try {
+                console.log('Processando pagamento...');
+                console.log('Payment ID:', paymentId);
+                console.log('User ID:', userId);
+
+                const requestBody = {
+                    action: 'checkout',
+                    userId,
+                    paymentId,
+                    payerId: urlParams.get('merchant_account_id') || 'N/A',
+                    payerEmail: 'email@exemplo.com', // Mercado Pago não retorna email na URL
+                    amount: 0, // Será calculado no backend
+                };
+
+                console.log('Enviando requisição:', requestBody);
+
+                const response = await fetch(`${window.location.origin}/checkout`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody),
+                });
+
+                const data = await response.json();
+                console.log('Resposta do servidor:', data);
+
+                if (data.success) {
+                    console.log('✅ Pedido processado com sucesso!');
+                } else {
+                    console.error('❌ Erro ao processar pedido:', data);
+                }
+            } catch (error) {
+                console.error('Erro ao processar pedido:', error);
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
