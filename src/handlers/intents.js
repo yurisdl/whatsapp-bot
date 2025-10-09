@@ -185,7 +185,7 @@ const intentHandlers = {
         }
 
         if (foundProduct) {
-            const result = await db.removeFromCart(updatedUser, foundProduct.fields.Title);
+            const result = await db.removeFromCart(updatedUser, foundProduct.id);
 
             if (!result.success) {
                 return `❌ ${result.message}`;

@@ -287,22 +287,12 @@ const db = {
             }
         },
 
-        remove: async (user, productName) => {
+        remove: async (user, productId) => {
             try {
                 const pool = createPool();
                 const products = await db.products.getAll();
 
-                let product = products.find(p =>
-                    p.fields.Title.toLowerCase() === productName.toLowerCase()
-                );
-
-                if (!product) {
-                    const searchWords = productName.toLowerCase().split(' ');
-                    product = products.find(p => {
-                        const title = p.fields.Title.toLowerCase();
-                        return searchWords.every(word => title.includes(word));
-                    });
-                }
+                const product = products.find(p => p.id === parseInt(productId));
 
                 if (!product) {
                     return { success: false, message: 'Produto não encontrado' };
@@ -367,39 +357,6 @@ const db = {
     },
 
     orders: {
-        updateStatus: async (orderId, status) => {
-            try {
-                const pool = createPool();
-                await pool.execute(
-                    'UPDATE orders SET status = ? WHERE id = ?',
-                    [status, orderId]
-                );
-
-                const [rows] = await pool.execute(
-                    'SELECT * FROM orders WHERE id = ?',
-                    [orderId]
-                );
-
-                const order = rows[0];
-                return {
-                    success: true,
-                    order: {
-                        id: order.id,
-                        fields: {
-                            UserID: order.user_id,
-                            Status: order.status,
-                            ShippingAddress: order.shipping_address,
-                            PayerID: order.payer_id,
-                            PayerEmailAddress: order.payer_email,
-                            Amount: order.amount
-                        }
-                    }
-                };
-            } catch (error) {
-                return { success: false, error: error.message };
-            }
-        },
-
         createOrUpdate: async (user, paymentInfo = {}) => {
             try {
                 const pool = createPool();
@@ -497,7 +454,6 @@ module.exports = {
     addToCart: db.cart.add,
     getCart: db.cart.get,
     removeFromCart: db.cart.remove,
-    updateOrderStatus: db.orders.updateStatus,
     createOrUpdateOrder: db.orders.createOrUpdate,
     closePool: async () => {
         if (pool) {
