@@ -12,7 +12,7 @@
     "@nlpjs/basic": "^4.26.1",
     "@nlpjs/builtin-microsoft": "^4.26.1",
     "@nlpjs/lang-pt": "^5.0.0-alpha.5",
-    "@whiskeysockets/baileys": "^6.7.20",
+    "@whiskeysockets/baileys": "^7.0.0-rc.5",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
