@@ -60,12 +60,38 @@ const connectToWhatsApp = async () => {
 
         const { version } = await fetchLatestBaileysVersion();
 
+        // Silencia temporariamente console.log para suprimir logs do Baileys
+        const originalLog = console.log;
+        console.log = () => {};
+
         const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys');
 
+        // Wrapper para saveCreds que silencia logs
+        const originalSaveCreds = saveCreds;
+        const silentSaveCreds = async () => {
+            console.log = () => {};
+            await originalSaveCreds();
+            console.log = originalLog;
+        };
+
+        // Restaura console.log após inicialização
+        console.log = originalLog;
+
+        const logger = {
+            level: 'silent',
+            trace: () => {},
+            debug: () => {},
+            info: () => {},
+            warn: console.warn,
+            error: console.error,
+            child: () => logger
+        };
+
         const sock = makeWASocket({
+            logger: logger,
             auth: {
                 creds: state.creds,
-                keys: makeCacheableSignalKeyStore(state.keys, console)
+                keys: makeCacheableSignalKeyStore(state.keys, logger)
             },
             version: version,
             printQRInTerminal: false,
@@ -87,7 +113,7 @@ const connectToWhatsApp = async () => {
             shouldIgnoreJid: (jid) => jid.endsWith('@broadcast')
         });
 
-        sock.ev.on('creds.update', saveCreds);
+        sock.ev.on('creds.update', silentSaveCreds);
 
         sock.ev.on('connection.update', async (update) => {
             const { connection, lastDisconnect, qr } = update;
