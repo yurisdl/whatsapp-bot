@@ -62,6 +62,9 @@ const connectToWhatsApp = async () => {
 
         // Silencia temporariamente console.log para suprimir logs do Baileys
         const originalLog = console.log;
+        const originalWarn = console.warn;
+        const originalError = console.error;
+
         console.log = () => {};
 
         const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys');
@@ -69,21 +72,37 @@ const connectToWhatsApp = async () => {
         // Wrapper para saveCreds que silencia logs
         const originalSaveCreds = saveCreds;
         const silentSaveCreds = async () => {
+            const tempLog = console.log;
             console.log = () => {};
-            await originalSaveCreds();
-            console.log = originalLog;
+            try {
+                await originalSaveCreds();
+            } finally {
+                console.log = tempLog === originalLog ? originalLog : tempLog;
+            }
         };
 
         // Restaura console.log após inicialização
         console.log = originalLog;
+        console.warn = originalWarn;
+        console.error = originalError;
 
         const logger = {
             level: 'silent',
             trace: () => {},
             debug: () => {},
             info: () => {},
-            warn: console.warn,
-            error: console.error,
+            warn: (msg) => {
+                // Silencia avisos de erro de stream 515
+                if (typeof msg === 'string' && msg.includes('515')) return;
+                if (typeof msg === 'object' && JSON.stringify(msg).includes('515')) return;
+                originalWarn(msg);
+            },
+            error: (msg) => {
+                // Silencia erros de stream 515
+                if (typeof msg === 'string' && msg.includes('515')) return;
+                if (typeof msg === 'object' && JSON.stringify(msg).includes('515')) return;
+                originalError(msg);
+            },
             child: () => logger
         };
 
@@ -120,13 +139,20 @@ const connectToWhatsApp = async () => {
 
             if (qr) {
                 connectionAttempts = 0;
-                console.log('\n📱 Escaneie o QR Code abaixo:\n');
-                qrcodeTerminal.generate(qr, { small: false });
-                console.log('\n');
+                originalLog('\n📱 Escaneie o QR Code abaixo:\n');
+                qrcodeTerminal.generate(qr, { small: true });
+                originalLog('\n');
             }
 
             if (connection === 'close') {
                 const statusCode = lastDisconnect?.error?.output?.statusCode;
+                const errorMessage = lastDisconnect?.error?.message || '';
+
+                // Ignora erro 515 - é um erro esperado que não afeta a conexão
+                if (errorMessage.includes('515') || errorMessage.includes('stream:error')) {
+                    return;
+                }
+
                 const shouldReconnect = statusCode !== DisconnectReason.loggedOut;
 
                 if (statusCode === 405) {
@@ -141,7 +167,7 @@ const connectToWhatsApp = async () => {
                     clearCorruptedSession();
                 }
             } else if (connection === 'open') {
-                console.log('✅ Conectado ao WhatsApp!');
+                originalLog('✅ Conectado ao WhatsApp!');
                 connectionAttempts = 0;
                 setWhatsappSocket(sock);
             }
