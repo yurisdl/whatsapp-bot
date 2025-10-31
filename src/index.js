@@ -30,20 +30,71 @@ app.listen(PORT, () => {
     console.log(`✅ Servidor rodando na porta ${PORT}`);
 });
 
-const clearCorruptedSession = () => {
-    const authPath = './auth_info_baileys';
+const clearCorruptedSession = (originalLog) => {
+    const path = require('path');
+    const authPath = path.join(__dirname, '../auth_info_baileys');
+
+    const log = originalLog || console.log;
+
+    log('🗑️  Verificando pasta:', authPath);
+
     if (fs.existsSync(authPath)) {
-        fs.rmSync(authPath, { recursive: true, force: true });
-        console.log('Sessão limpa. Gerando novo QR Code...');
+        try {
+            log('🗑️  Removendo pasta de autenticação...');
+
+            // Tenta remover arquivos primeiro
+            const files = fs.readdirSync(authPath);
+            log(`📂 Encontrados ${files.length} arquivos/pastas`);
+
+            for (const file of files) {
+                const filePath = path.join(authPath, file);
+                try {
+                    const stat = fs.statSync(filePath);
+                    if (stat.isDirectory()) {
+                        fs.rmSync(filePath, { recursive: true, force: true });
+                    } else {
+                        fs.unlinkSync(filePath);
+                    }
+                    log(`  ✓ Removido: ${file}`);
+                } catch (err) {
+                    log(`  ✗ Erro ao remover ${file}:`, err.message);
+                }
+            }
+
+            // Remove a pasta principal
+            fs.rmdirSync(authPath);
+
+            // Verifica se realmente foi removida
+            if (!fs.existsSync(authPath)) {
+                lastSessionClear = Date.now();
+                log('✅ Pasta removida com sucesso!');
+            } else {
+                log('⚠️  Pasta ainda existe após remoção!');
+            }
+        } catch (error) {
+            log('❌ Erro ao remover pasta:', error.message);
+            log('Stack:', error.stack);
+        }
+    } else {
+        log('ℹ️  Pasta de autenticação não existe');
     }
 };
 
 let connectionAttempts = 0;
-const MAX_ATTEMPTS = 2;
+const MAX_ATTEMPTS = 3;
 let lastConnectionAttempt = 0;
+let isConnecting = false;
+let lastSessionClear = 0;
+let waitingForQR = false;
 
 const connectToWhatsApp = async () => {
+    if (isConnecting) {
+        return;
+    }
+
     try {
+        isConnecting = true;
+
         const now = Date.now();
         const timeSinceLastAttempt = now - lastConnectionAttempt;
         if (timeSinceLastAttempt < 10000) {
@@ -53,9 +104,9 @@ const connectToWhatsApp = async () => {
         lastConnectionAttempt = Date.now();
 
         if (connectionAttempts >= MAX_ATTEMPTS) {
-            clearCorruptedSession();
+            clearCorruptedSession(console.log);
             connectionAttempts = 0;
-            await new Promise(resolve => setTimeout(resolve, 30000));
+            await new Promise(resolve => setTimeout(resolve, 5000));
         }
 
         const { version } = await fetchLatestBaileysVersion();
@@ -139,36 +190,112 @@ const connectToWhatsApp = async () => {
 
             if (qr) {
                 connectionAttempts = 0;
+                waitingForQR = false;
                 originalLog('\n📱 Escaneie o QR Code abaixo:\n');
-                qrcodeTerminal.generate(qr, { small: true });
+                qrcodeTerminal.generate(qr, { small: true }, (qrcode) => {
+                    process.stdout.write(qrcode + '\n');
+                });
                 originalLog('\n');
             }
 
             if (connection === 'close') {
+                isConnecting = false;
                 const statusCode = lastDisconnect?.error?.output?.statusCode;
                 const errorMessage = lastDisconnect?.error?.message || '';
 
-                // Ignora erro 515 - é um erro esperado que não afeta a conexão
-                if (errorMessage.includes('515') || errorMessage.includes('stream:error')) {
+                // Ignora apenas o LOG do erro 515, mas continua processando
+                const is515Error = errorMessage.includes('515') || errorMessage.includes('stream:error');
+                const is428Error = statusCode === 428; // Connection Closed - esperado após limpar sessão
+
+                if (!is515Error && !is428Error) {
+                    originalLog(`🔌 Conexão fechada. Código: ${statusCode || 'desconhecido'}`);
+                }
+
+                // Se é apenas erro 515 sem statusCode real, ignora totalmente
+                if (is515Error && !statusCode) {
+                    return;
+                }
+
+                // Erro 428 após limpar sessão - aguarda QR Code ser gerado
+                if (is428Error && lastSessionClear > 0 && (Date.now() - lastSessionClear) < 30000) {
+                    originalLog('⏳ Aguardando QR Code após limpeza de sessão...');
                     return;
                 }
 
                 const shouldReconnect = statusCode !== DisconnectReason.loggedOut;
+                const isLoggedOut = statusCode === DisconnectReason.loggedOut;
+                const timeSinceLastClear = Date.now() - lastSessionClear;
 
-                if (statusCode === 405) {
-                    clearCorruptedSession();
-                    connectionAttempts = 0;
-                    setTimeout(() => connectToWhatsApp(), 15000);
+                // Se foi desconectado pelo celular (logged out), limpa sessão
+                // MAS: se já limpou recentemente (menos de 30s), não limpa novamente
+                if (isLoggedOut) {
+                    if (timeSinceLastClear > 0 && timeSinceLastClear < 30000) {
+                        // Acabou de limpar, aguarda QR Code
+                        if (!waitingForQR) {
+                            waitingForQR = true;
+                            originalLog('📱 Aguardando geração do QR Code...');
+                        }
+                        setTimeout(() => connectToWhatsApp(), 5000);
+                        return;
+                    }
+
+                    originalLog('📱 Dispositivo desconectado pelo celular. Limpando sessão...');
+                    clearCorruptedSession(originalLog);
+                    originalLog('🔄 Gerando novo QR Code em 5 segundos...');
+                    setTimeout(async () => {
+                        connectionAttempts = 0;
+                        waitingForQR = false;
+                        isConnecting = false;
+                        await connectToWhatsApp();
+                    }, 5000);
+                    return;
+                }
+
+                // Erros específicos que requerem limpeza de sessão (401/405)
+                if (statusCode === 405 || statusCode === 401) {
+                    // Se acabou de limpar a sessão (menos de 60s), aguarda QR Code sem incrementar contador
+                    if (timeSinceLastClear > 0 && timeSinceLastClear < 60000) {
+                        if (!waitingForQR) {
+                            waitingForQR = true;
+                            originalLog('📱 Aguardando geração do QR Code...');
+                        }
+                        // Aguarda mais tempo para o QR Code aparecer
+                        setTimeout(() => connectToWhatsApp(), 5000);
+                        return;
+                    }
+
+                    // Reseta o lastSessionClear após 60s para permitir novas tentativas
+                    if (timeSinceLastClear >= 60000) {
+                        lastSessionClear = 0;
+                    }
+
+                    connectionAttempts++;
+                    if (connectionAttempts > MAX_ATTEMPTS) {
+                        originalLog('⚠️  Máximo de tentativas atingido. Limpando sessão...');
+                        clearCorruptedSession(originalLog);
+                        originalLog('🔄 Gerando novo QR Code em 5 segundos...');
+                        setTimeout(async () => {
+                            connectionAttempts = 0;
+                            waitingForQR = false;
+                            isConnecting = false;
+                            await connectToWhatsApp();
+                        }, 5000);
+                    } else {
+                        const waitTime = 3000;
+                        originalLog(`🔄 Tentando reconectar em ${waitTime/1000}s (tentativa ${connectionAttempts}/${MAX_ATTEMPTS})...`);
+                        setTimeout(() => connectToWhatsApp(), waitTime);
+                    }
                 } else if (shouldReconnect) {
                     connectionAttempts++;
-                    const waitTime = connectionAttempts * 10000;
+                    const waitTime = Math.min(connectionAttempts * 10000, 30000);
+                    originalLog(`🔄 Tentando reconectar em ${waitTime/1000}s (tentativa ${connectionAttempts}/${MAX_ATTEMPTS})...`);
                     setTimeout(() => connectToWhatsApp(), waitTime);
-                } else {
-                    clearCorruptedSession();
                 }
             } else if (connection === 'open') {
                 originalLog('✅ Conectado ao WhatsApp!');
                 connectionAttempts = 0;
+                isConnecting = false;
+                waitingForQR = false;
                 setWhatsappSocket(sock);
             }
         });
@@ -193,12 +320,17 @@ const connectToWhatsApp = async () => {
             }
         });
     } catch (error) {
-        console.error('Erro ao conectar:', error.message);
+        isConnecting = false;
+        console.error('❌ Erro ao conectar:', error.message);
         connectionAttempts++;
         if (connectionAttempts < MAX_ATTEMPTS) {
+            console.log(`🔄 Tentando novamente em 5s (tentativa ${connectionAttempts}/${MAX_ATTEMPTS})...`);
             setTimeout(() => connectToWhatsApp(), 5000);
         } else {
-            clearCorruptedSession();
+            console.log('⚠️  Máximo de tentativas atingido. Limpando sessão...');
+            clearCorruptedSession(console.log);
+            connectionAttempts = 0;
+            setTimeout(() => connectToWhatsApp(), 5000);
         }
     }
 };
