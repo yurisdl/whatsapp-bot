@@ -150,16 +150,22 @@ const getCheckoutInformation = async () => {
       amount += itemTotal;
 
       const listItemElement = document.createElement('li');
-      listItemElement.className = 'list-group-item';
+      listItemElement.className = 'list-group-item cart-item';
       listItemElement.innerHTML = `
-        <div class="row">
-          <div class="col-2">
-            <img src="${imageURL}" class="img-fluid" alt="${title}">
+        <div class="cart-item-content">
+          <div class="cart-item-image">
+            <img src="${imageURL}" alt="${title}">
           </div>
-          <div class="col-4">${title}</div>
-          <div class="col-2">R$ ${price.toFixed(2)}</div>
-          <div class="col-2">x ${quantity}</div>
-          <div class="col-2">R$ ${itemTotal.toFixed(2)}</div>
+          <div class="cart-item-details">
+            <div class="cart-item-title">${title}</div>
+            <div class="cart-item-meta">
+              <span class="cart-item-price">R$ ${price.toFixed(2)}</span>
+              <span class="cart-item-quantity">Qtd: ${quantity}</span>
+            </div>
+          </div>
+          <div class="cart-item-total">
+            R$ ${itemTotal.toFixed(2)}
+          </div>
         </div>`;
       cartListEl.appendChild(listItemElement);
     });
